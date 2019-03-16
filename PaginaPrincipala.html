@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Main</title>
+    <style>
+        body{
+            margin-left:200px;
+            margin-right:200px;
+            position:relative;
+            background-color:lightgray;
+            font-family:Calibri;
+        }
+        .bicla{
+            width:130px;
+        }
+        .header .butoane{
+            position:absolute;
+            right:0;
+            top:30px;
+        }
+        .login, .register {
+            border: none;
+            font-size: 20px;
+            background-color: forestgreen;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+        .meniu{
+            background-color:dimgrey;
+            position:relative;
+            padding-left:20px;
+        }
+        .meniu p{
+
+            display:inline-flex;
+            padding:10px;
+            margin-top:0px;
+            margin-bottom:0px;
+            margin-left:0px;
+            margin-right:0px;
+        }
+        .meniu p:hover{
+            background-color:darkslategray;
+            color:lightgray;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="PaginaPrincipala.html"><img src="biciclete.png" class="bicla"/></a>
+        <div class="butoane">
+            <a href="Login.html"><button class="login">Login</button></a>
+            <a href="Login.html"><button class="register">Register</button></a>
+        </div>
+        <div class="meniu">
+            <p class="calendar">Calendar</p>
+            <p class="cont">Comenzile mele</p>
+        </div>
+    </div>
+</body>
+</html>
