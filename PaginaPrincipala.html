@@ -30,20 +30,25 @@
             padding-right: 30px;
             cursor: pointer;
         }
-        .meniu{
-            background-color:dimgrey;
-            position:relative;
-            padding-left:20px;
+        .meniu {
+            background-color: dimgrey;
+            position: relative;
+            padding-left: 20px;
+            
         }
-        .meniu p{
-
-            display:inline-flex;
-            padding:10px;
-            margin-top:0px;
-            margin-bottom:0px;
-            margin-left:0px;
-            margin-right:0px;
-        }
+            .meniu p {
+                display: inline-flex;
+                color: black;
+                padding: 10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                text-underline-position: unset;
+            }
+            .meniu a {
+                text-decoration: none;
+            }
         .meniu p:hover{
             background-color:darkslategray;
             color:lightgray;
@@ -59,7 +64,7 @@
             <a href="Login.html"><button class="register">Register</button></a>
         </div>
         <div class="meniu">
-            <p class="calendar">Calendar</p>
+            <a href="Calendar.html"><p class="calendar">Calendar</p></a>
             <p class="cont">Comenzile mele</p>
         </div>
     </div>
