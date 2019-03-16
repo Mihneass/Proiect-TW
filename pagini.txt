@@ -1,0 +1,12 @@
+-pagina de pornire
+-pagina de login
+-pagina de register
+-pagina de calendar
+-pagina de formular
+-pagina de primire de cereri
+-pagina fiecarei cereri
+-pagina raspuns
+
+
+UPDATE
+-pagina de cereri trimise de client
