@@ -5,21 +5,24 @@
     <meta charset="utf-8" />
     <title>Main</title>
     <style>
-        body{
-            margin-left:200px;
-            margin-right:200px;
-            position:relative;
-            background-color:lightgray;
-            font-family:Calibri;
+        body {
+            margin-left: 200px;
+            margin-right: 200px;
+            position: relative;
+            background-color: lightgray;
+            font-family: Calibri;
         }
-        .bicla{
-            width:130px;
+
+        .bicla {
+            width: 130px;
         }
-        .header .butoane{
-            position:absolute;
-            right:0;
-            top:30px;
+
+        .header .butoane {
+            position: absolute;
+            right: 0;
+            top: 30px;
         }
+
         .login, .register {
             border: none;
             font-size: 20px;
@@ -30,12 +33,13 @@
             padding-right: 30px;
             cursor: pointer;
         }
+
         .meniu {
             background-color: dimgrey;
             position: relative;
             padding-left: 20px;
-            
         }
+
             .meniu p {
                 display: inline-flex;
                 color: black;
@@ -46,19 +50,32 @@
                 margin-right: 0px;
                 text-underline-position: unset;
             }
+
             .meniu a {
                 text-decoration: none;
             }
-        .meniu p:hover{
-            background-color:darkslategray;
-            color:lightgray;
-            cursor:pointer;
+
+            .meniu p:hover {
+                background-color: darkslategray;
+                color: lightgray;
+                cursor: pointer;
+            }
+        .corp div {
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin: 50px;
+            padding-left:30px;
+        }
+        .corp {
+            display: inline-flex;
+            
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="PaginaPrincipala.html"><img src="biciclete.png" class="bicla"/></a>
+        <a href="PaginaPrincipala.html"><img src="biciclete.png" class="bicla" /></a>
         <div class="butoane">
             <a href="Login.html"><button class="login">Login</button></a>
             <a href="Login.html"><button class="register">Register</button></a>
@@ -66,6 +83,20 @@
         <div class="meniu">
             <a href="Calendar.html"><p class="calendar">Calendar</p></a>
             <a href="Cereri.html"><p class="cont">Comenzile mele</p></a>
+        </div>
+    </div>
+    <div class="corp">
+        <div class="cerere1">
+        <p>Trimis acum .. ore</p>
+        <p>Ultima actualizare:</p>
+        <p>Detaliile cererii:</p>
+        <p>Status: In asteptare</p>
+        </div>
+        <div class="cerere2">
+            <p>Trimis acum .. ore</p>
+            <p>Ultima actualizare:</p>
+            <p>Detaliile cererii:</p>
+            <p>Status: In asteptare</p>
         </div>
     </div>
 </body>
