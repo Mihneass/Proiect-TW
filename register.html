@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .container {
+
+            padding: 16px;
+        }
+
+        label  {
+            padding: 1px 10px;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+       .avatar {
+            width: 50%;
+            border-radius: 50%;
+        }
+
+        input[type=text], input[type=password] {
+            width:  100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0094ff;
+            color: black;
+            padding: 20px 40px;
+            margin: 10px 0 ;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .main {
+            display: none;
+            width: 50%; 
+            overflow: auto; 
+            padding-top: 100px;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .continut {
+            background-color: grey;
+            margin: 5% auto 15% auto; 
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            color: black;
+            font-size: 40px;
+        }
+
+            .close:hover
+            {
+                color: darkred;
+                cursor: pointer;
+            }
+        button:hover {
+            opacity: 0.5;
+        }
+
+        .pass {
+            float: right;
+        }
+      
+        .animatie {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <button onclick="document.getElementById('mainID').style.display='block'" style="width:auto;">Register</button>
+
+    <div id="mainID" class="main">
+
+        <form class="continut animatie">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('mainID').style.display='none'" class="close" >&times;</span>
+                <h1>
+                    Create Account
+                </h1>
+            </div>
+
+            <div class="container">
+
+                <label for="uname"><b>Username</b></label>
+
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <br />
+
+                <label for="pass"><b>Password</b></label>
+                <br />
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+                <label for="email"><b>Email</b></label>
+
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label>
+                    <input type="checkbox" name="remember" required>
+                    <b> I have read and agree to the <a href="terms.txt">terms of service.</a>
+                    </b>
+                </label>
+
+                <button type="submit">Register</button>
+
+            </div>
+
+           
+         
+        </form>
+    </div>
+</body>
+</html>
