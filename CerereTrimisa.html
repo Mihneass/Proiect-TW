@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Main</title>
+    <title>O cerere</title>
     <style>
         body {
             margin-left: 200px;
@@ -12,18 +12,9 @@
             background-color: lightgray;
             font-family: Calibri;
         }
-
         .bicla {
             width: 130px;
         }
-
-        .header .butoane {
-            position: absolute;
-            right: 0;
-            top: 30px;
-        }
-
-
         .meniu {
             background-color: dimgrey;
             position: relative;
@@ -40,7 +31,6 @@
                 margin-right: 0px;
                 text-underline-position: unset;
             }
-
             .meniu a {
                 text-decoration: none;
             }
@@ -50,21 +40,16 @@
                 color: lightgray;
                 cursor: pointer;
             }
-        .corp div {
-            border: solid;
-            border-radius: 2%;
-            width: 464px;
-            margin: 50px;
-            padding-left:30px;
-        }
-        .corp {
-            display: inline-flex;
-            
-        }
 
+        .header .butoane {
+            position: absolute;
+            right: 0;
+            top: 30px;
+        }
         button:hover {
             opacity: 0.5;
         }
+
         button {
             background-color: #0094ff;
             color: black;
@@ -73,6 +58,36 @@
             cursor: pointer;
             width: 100%;
         }
+        .corp-cerere {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+            border: 5px solid;
+            border-color: darkgray;
+            border-radius: 2%;
+            margin-top:100px;
+            position:relative;
+        }
+        .main-body{
+            text-align:center;
+        }
+        h2{
+            color:orange;
+            margin-top:50px;
+            margin-bottom:120px;
+        }
+        .trimis{
+            position:absolute;
+            left:10px;
+            bottom:0;
+        }
+        .actualizare{
+           position:absolute;
+           right:10px;
+           bottom:0;
+        }
+
     </style>
 </head>
 <body>
@@ -80,34 +95,29 @@
         <a href="PaginaPrincipala.html"><img src="biciclete.png" class="bicla" /></a>
         <div class="butoane">
             <a href="Login.html"><button style="width:auto;">Login</button></a>
-            <a href="Login.html"><button style="width:auto;">Register</button></a>
+            <a href="Login.html"><button style="width:auto;">Register</button></a>    
         </div>
         <div class="meniu">
             <a href="Calendar.html"><p class="calendar">Calendar</p></a>
             <a href="Cereri.html"><p class="cont">Comenzile mele</p></a>
         </div>
     </div>
-    <div class="corp">
-        
-            <div class="cerere1">
-                <a href="CerereTrimisa.html">
-                    <p>Trimis acum .. ore</p>
-                    <p>Ultima actualizare:</p>
-                    <p>Detaliile cererii:</p>
-                    <p>Status: In asteptare</p>
-                </a>
-            </div>
+    <div class="main-body">
+    <div class="corp-cerere">
+        <h1>"
         
         
-            <div class="cerere2">
-       <a href="CerereTrimisa.html">
-                <p>Trimis acum .. ore</p>
-                <p>Ultima actualizare:</p>
-                <p>Detaliile cererii:</p>
-                <p>Status: In asteptare</p>
-        </a>
-        </div>
-
+        Text lung aici AAAAAAAAAAAAAAAAAAA
+        
+        
+        
+        "</h1>
+        <h2>
+            Status: In asteptare
+        </h2>
+        <p class="trimis">Trimis acum .. ore</p>
+        <p class="actualizare">Ultima actualizare acum .. ore</p>
     </div>
+        </div>
 </body>
 </html>
