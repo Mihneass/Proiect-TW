@@ -208,7 +208,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="PaginaPrincipala.html"><img src="biciclete.png" class="bicla"/></a>
+        <a href="PaginaPrincipala.html"><img alt="Logo" src="biciclete.png" class="bicla"/></a>
         <div class="butoane">
             <button onclick="document.getElementById('mainID').style.display = 'block'; document.getElementById('mainID-register').style.display = 'none'" style="width:auto;">Login</button>
             <button onclick="document.getElementById('mainID-register').style.display = 'block'; document.getElementById('mainID').style.display='none'" style="width:auto;">Register</button>
@@ -232,13 +232,13 @@
 
                 <label for="uname"><b>Username</b></label>
                 <br />
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" id="uname" required>
 
                 <br />
 
                 <label for="pass"><b>Password</b></label>
                 <br />
-                <input type="password" placeholder="Enter Password" name="pass" required>
+                <input type="password" placeholder="Enter Password" id="pass" required>
 
                 <label>
                     <input type="checkbox" name="remember"><b>Remember</b>
@@ -280,17 +280,17 @@
 
                 <label for="uname-register"><b>Username</b></label>
 
-                <input type="text" placeholder="Enter Username" name="uname-register" required>
+                <input type="text" placeholder="Enter Username" id="uname-register" required>
 
                 <br />
 
                 <label for="pass-register"><b>Password</b></label>
                 <br />
-                <input type="password" placeholder="Enter Password" name="pass-register" required>
+                <input type="password" placeholder="Enter Password" id="pass-register" required>
 
                 <label for="email-register"><b>Email</b></label>
 
-                <input type="text" placeholder="Enter Email" name="email-register" required>
+                <input type="text" placeholder="Enter Email" id="email-register" required>
 
                 <label>
                     <input type="checkbox" name="remember-register" required>
