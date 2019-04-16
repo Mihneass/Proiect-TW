@@ -1,0 +1,141 @@
+ button:hover {
+            opacity: 0.5;
+        }
+        button {
+            background-color: #0094ff;
+            color: black;
+            padding: 20px 40px;
+            margin: 10px 0;
+            cursor: pointer;
+            width: 100%;
+        }
+        .administrator-meniu{
+            display:flex;
+            margin-top:80px;
+            background-color:dimgrey;
+        }
+            .administrator-meniu button {
+                background-color: dimgrey;
+                border:none;
+            }
+        .containter-primite .cerere {
+            
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin: 50px;
+            padding-left: 30px;
+            position:relative;
+        }
+        .containter-primite {
+margin-right:20%;
+margin-left:15%;
+            display: flex;
+            
+            
+        }
+        .main-primite{
+            background-color: GrayText;
+            display:none;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .containter-disponibile .piesa {
+            display: flex;
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin: 50px;
+            padding-left: 30px;
+            position:relative;
+        }
+        .containter-disponibile {
+           margin-right:20%;
+           margin-left:15%;
+            display: flex;
+            background-color: GrayText;
+        }
+        .main-disponibile {
+            background-color: GrayText;
+            display: none;
+        }
+        .containter-comanda .piesa-comanda {
+            display: flex;
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin: 50px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .containter-comanda {
+margin-right:20%;
+margin-left:15%;
+            display: flex;
+            background-color: GrayText;
+        }
+        .main-comanda {
+            background-color: GrayText;
+            display: none;
+        }
+        .corp img{
+            width:50px;
+            height:50px;
+            margin-right:50px;
+            margin-top:50px;
+        }
+
+        @media only screen and (max-width: 1600px) {
+    body{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .containter-disponibile {
+           margin-right:5%;
+           margin-left:10%;
+            display: flex;
+            background-color: GrayText;
+        }
+        .containter-primite {
+           margin-right:5%;
+           margin-left:10%;
+            display: flex;
+            background-color: GrayText;
+        }
+        .containter-comanda {
+           margin-right:5%;
+           margin-left:10%;
+            display: flex;
+            background-color: GrayText;
+        }
+    }
+    @media only screen and (max-width: 900px){
+        body{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .containter-disponibile {
+           margin-right:5%;
+           margin-left:20%;
+            display: flex;
+            flex-wrap:wrap;
+            background-color: GrayText;
+        }
+        .containter-primite {
+           margin-right:5%;
+           margin-left:20%;
+            display: flex;
+            flex-wrap:wrap;
+            background-color: GrayText;
+        }
+        .containter-comanda {
+           margin-right:5%;
+           margin-left:20%;
+            display: flex;
+            flex-wrap:wrap;
+            background-color: GrayText;
+        }
+
+    }
