@@ -26,14 +26,7 @@
             box-sizing: border-box;
             font-size:4vw;
         }
-        button {
-            background-color: #0094ff;
-            color: black;
-            padding: 20px 40px;
-            margin: 10px 0 ;
-            cursor: pointer;
-            width: 100%;
-            font-size:5vw;
+       
         }
         .main {
            
@@ -63,6 +56,14 @@
         button:hover {
             opacity: 0.5;
         }
+
+        button {
+            background-color: #0094ff;
+            color: black;
+            padding: 20px 30px;
+            cursor: pointer;
+            width: 100%;
+		}
         .pass {
             float: right;
         }
