@@ -1,0 +1,68 @@
+
+        body {
+            font-family: Arial;
+        }
+        .container {
+            padding: 16px;
+        }
+        label  {
+            padding: 1px 10px;
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+       .avatar {
+            width: 50%;
+            border-radius: 50%;
+        }
+        input[type=text], input[type=password] {
+            width:  100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0094ff;
+            color: black;
+            padding: 20px 40px;
+            margin: 10px 0 ;
+            cursor: pointer;
+            width: 100%;
+        }
+        .main {
+           
+            width: 50%; 
+            overflow: auto; 
+            padding-top: 100px;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .continut {
+            background-color: grey;
+            margin: 5% auto 15% auto; 
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            color: black;
+            font-size: 40px;
+        }
+            .close:hover
+            {
+                color: darkred;
+                cursor: pointer;
+            }
+        button:hover {
+            opacity: 0.5;
+        }
+        .pass {
+            float: right;
+        }
+      
+        
+      
+   
