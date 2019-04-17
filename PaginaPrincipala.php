@@ -8,6 +8,33 @@
     <link rel="stylesheet" href="styles/stilizare-butoane.css" />
     <link href="StyleSheet.css" rel="stylesheet" type="text/css">
 
+
+    <style>
+    .forms {
+
+                }
+.login 
+{   
+
+    height: 100px;
+  width:   80%;
+    position:absolute;
+    top:20%;
+    left:90%;
+    
+}
+     
+.register 
+{
+    
+    position:absolute;
+    top:20%;
+    right:20%;
+   
+
+}
+    </style>
+
 </head>
 <body>
     <div class="header">
@@ -66,7 +93,7 @@
 <h1>
             Login
         </h1>
-    <div class="container">
+    <div class="container" position="static">
 
         <label for="uname"><b>Username</b></label>
         <br />
