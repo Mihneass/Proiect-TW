@@ -1,0 +1,11 @@
+button:hover {
+            opacity: 0.5;
+        }
+
+        button {
+            background-color: #0094ff;
+            color: black;
+            padding: 20px 30px;
+            cursor: pointer;
+            width: 100%;
+		}

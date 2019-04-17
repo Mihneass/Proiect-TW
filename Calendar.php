@@ -105,7 +105,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 </head>
 <body>
 <div class="header">
-        <a href="PaginaPrincipala.php"><img alt="Logo" src="biciclete.png" class="bicla"/></a>
+        <a href="Cereri.php"><img alt="Logo" src="biciclete.png" class="bicla"/></a>
         <div class="meniu">
             <a href="Calendar.php"><p class="calendar">Calendar</p></a>
             <a href="Cereri.php"><p class="cont">Comenzile mele</p></a>

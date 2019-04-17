@@ -8,29 +8,6 @@
     <link rel="stylesheet" href="styles/stilizare-butoane.css" />
     <link href="StyleSheet.css" rel="stylesheet" type="text/css">
 
-    <style>
-.forms{
-display:inline-flex;
-align-items:baseline;
-}
-.register{
-    flex-shrink:2;
-}
-.login{
-    flex-shrink:2;
-}
-
-@media only screen and (max-width: 1000px){
-    .forms{
-    display:flex;
-    flex-wrap:wrap;
-    }
-    .login{
-        margin-right:20%;
-    }
-}
-
-    </style>
 </head>
 <body>
     <div class="header">

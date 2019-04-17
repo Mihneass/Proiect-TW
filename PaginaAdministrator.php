@@ -3,18 +3,15 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Pagina in care administratorul vede comenzi a primit, trimis si ce piese are</title>
+    <title>Administration</title>
     
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/stilizare-administrator.css">
 </head>
 <body>
     <div class="header">
-        <a href="PaginaPrincipala.php"><img src="biciclete.png" class="bicla" alt="Logo"/></a>
-        <div class="butoane">
-            <button onclick="window.open('Register.php')" style="width:auto;">Login</button>
-            <button onclick="window.open('Register.php')" style="width:auto;">Register</button>
-        </div>
+        <a href="PaginaAdministrator.php"><img src="biciclete.png" class="bicla" alt="Logo"/></a>
+
         <div class="meniu">
             <a href="Calendar.php"><p class="calendar">Calendar</p></a>
             <a href="Cereri.php"><p class="cont">Comenzile mele</p></a>

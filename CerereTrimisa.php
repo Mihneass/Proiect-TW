@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="PaginaPrincipala.php"><img src="biciclete.png" alt="Logo" class="bicla" /></a>
+        <a href="Cereri.php"><img src="biciclete.png" alt="Logo" class="bicla" /></a>
 
         <div class="meniu">
             <a href="Calendar.php"><p class="calendar">Calendar</p></a>
