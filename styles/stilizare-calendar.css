@@ -28,8 +28,15 @@
         td {
             
         }
+        .holiday button{
+            visibility: hidden;
+            
+        }
 
-        
+
+        .passed button{
+            visibility: hidden;}
+
             th:nth-of-type(6) {
                 color: blue;
             }
@@ -42,10 +49,10 @@
                 background-color: Tomato;
                 cursor:auto;
             }
-            td:nth-of-type(6) .button{
+            td:nth-of-type(6) button{
                 visibility: hidden;
             }
-            td:nth-of-type(6) a{
+            td:nth-of-type(6) button{
                 display: inline-block;
             pointer-events: none;
             cursor: default;
@@ -62,37 +69,23 @@
                 background-color: Tomato;
                 cursor:auto;
             }
-            td:nth-of-type(7) .button{
+            td:nth-of-type(7) button{
                 visibility: hidden;
             }
-            td:nth-of-type(7) a{
+            td:nth-of-type(7) button{
                 display: inline-block;
             pointer-events: none;
             cursor: default;
             }
         
+           
+        
         .holiday {
             background-color: Tomato;
         }
-        .holiday .button{
-            visibility: hidden;
-            
+
         }
-        .passed .button{
-            visibility: hidden;
-            
-        }
-        .passed a{
-            display: inline-block;
-            pointer-events: none;
-            cursor: default;
-            
-        }
-        .holiday a{
-            display: inline-block;
-            pointer-events: none;
-            cursor: default;
-            }
+
         .today, .today-holiday {
             background-color: LightSalmon;
         }
