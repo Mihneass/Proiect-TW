@@ -74,8 +74,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     $week .= '<td class="work">
     ';
     }
-    $week .=  $day . '<a href="formular.php"><p class="button">Make an appointment</p></a>
-</td>';
+    $week .='<form action="./formular.php" method="POST" class="create-form"><input type="text" name="day" value="'.$date.'" hidden>'.  $day . '<button name="submit" value="create" type="submit">Make an appointment</button>
+</form></td>';
 
     // Sunday OR last day of the month
     if ($str % 7 == 0 || $day == $day_count) {
@@ -101,7 +101,6 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/stilizare-calendar.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/stilizare-butoane.css">
 </head>
 <body>
 <div class="header">

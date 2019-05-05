@@ -75,7 +75,20 @@
             height: 150px;
             display: table-column-group;
         }
-       
+       .warning{
+           display:inline-flex;
+           justify-content:space-around;
+       }
+       .warning-sign{
+           width:15%;
+           height:15%;
+       }
+       @media only screen and (max-width: 1050px){
+        .warning{
+           display:inline-flex;
+           flex-wrap:wrap;
+       }
+       }
         
     </style>
 </head>
@@ -85,7 +98,11 @@
     <h1 class="avatar">Formular</h1>
 
     <div id="mainID" class="main">
-
+<div class="warning">
+<img src="warning.jpg" class="warning-sign">
+<h1 class="warning-text">Making an appointment for the following date: <?php echo $_POST['day'] ?>
+</h1>
+    </div>
         <form class="continut animatie" action="/action_page.php">
             <div class="imgcontainer">
                 <button onclick="window.location.href = 'PaginaPrincipala.php'">Close</button>
@@ -133,5 +150,6 @@
 
         </form>
     </div>
+
 </body>
 </html>
