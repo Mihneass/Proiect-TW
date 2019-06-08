@@ -213,7 +213,7 @@ BEGIN
     
     
                         
-    insert into tranzactii values(v_i,v_servici, sysdate, sysdate);
+    insert into piese values(v_i,v_servici, sysdate, sysdate);
    END LOOP;
    DBMS_OUTPUT.PUT_LINE('Inserarea a 5000 piese... GATA !');
     
