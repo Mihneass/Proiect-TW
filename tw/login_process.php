@@ -17,7 +17,7 @@ $rc=$row['MRFC'];
 oci_execute($rc);
 $rc_row = oci_fetch_array($rc, OCI_ASSOC+OCI_RETURN_NULLS);
 */
-if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/");
+if($rpassword==='USER NOT FOUND'){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/");
             echo $enquiry;
             header('Location: index.php');
             }

@@ -86,7 +86,7 @@
 				<h2>servicii</h2>
 					<ul>
 						<li>
-							<a href="formular.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
+							<a href="serv/revizii.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
 							<div>
 								<h3>Revizii</h3>
 								<p>
@@ -100,7 +100,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="formular.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
+							<a href="serv/cadru.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
 							<div>
 								<h3>Cadru</h3>
 								<p>
@@ -112,7 +112,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="formular.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
+							<a href="serv/furca.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
 							<div>
 								<h3>Furca si shock</h3>
 								<p>
@@ -127,7 +127,7 @@
 						</li>
 
 						<li>
-							<a href="formular.php" class="figure"><img src="images/roti.jpg" alt=""></a>
+							<a href="serv/roti.php" class="figure"><img src="images/roti.jpg" alt=""></a>
 							<div>
 								<h3>Roti</h3>
 								<p>									
@@ -139,7 +139,7 @@
 						</li>
 
 						<li>
-							<a href="formular.php" class="figure"><img src="images/frane.jpg" alt=""></a>
+							<a href="serv/frane.php" class="figure"><img src="images/frane.jpg" alt=""></a>
 							<div>
 								<h3>Frane</h3>
 								<p>									
@@ -150,7 +150,7 @@
 						</li>
 
 						<li>
-					     	<a href="formular.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
+					     	<a href="serv/transmisie.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
 							<div>
 								<h3>Transmisie</h3>
 								<p>									
@@ -162,7 +162,7 @@
 						</li>
 
 						<li>
-							<a href="formular.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
+							<a href="serv/alte.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
 							<div>
 								<h3>Diverse</h3>
 								<p>									
@@ -180,25 +180,25 @@
 				<h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="formular.html">revizii</a>
+							<a href="serv/revizii.html">revizii</a>
 						</li>
 						<li>
-							<a href="formular.html">cadru</a>
+							<a href="serv/cadru.html">cadru</a>
 						</li>
 						<li>
-							<a href="formular.html">furca si shock</a>
+							<a href="serv/furca.html">furca si shock</a>
 						</li>
 						<li>
-							<a href="formular.html">roti</a>
+							<a href="serv/roti.html">roti</a>
 						</li>
 						<li>
-							<a href="formular.html">frane</a>
+							<a href="serv/frane.html">frane</a>
 						</li>
 						<li>
-							<a href="formular.html">transmisie</a>
+							<a href="serv/transmisie.html">transmisie</a>
 						</li>
 						<li>
-							<a href="formular.html">diverse</a>
+							<a href="serv/.html">diverse</a>
 						</li>	
 					</ul>
 				</div>

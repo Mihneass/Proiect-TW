@@ -186,7 +186,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <li class="list-inline-item"><span class="title"><?= $title; ?></span></li>
             <li class="list-inline-item"><a href="?ym=<?= $next; ?>" class="btn btn-link">next &gt;</a></li>
         </ul>
-        <p class="text-right"><a href="calendar.php">Today</a></p>
+        <p class="text-right"><a href="booking.php">Today</a></p>
         <table class="table table-bordered">
             <td>
                 <tr>
