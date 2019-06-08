@@ -5,10 +5,14 @@ if (!$conn) {
    echo $m['message'], "\n";
    exit;
 }
-$enquiry="BEGIN GET_ONE_USER"."("."'".$_POST['uname']."'".",:pass,:id_user);end;";
+$enquiry="BEGIN GET_ONE_USER"."("."'".$_POST['uname']."'".",:pass,:id_user,:admin,:phone,:addre,:email);end;";
 $stid = oci_parse($conn, $enquiry);
 oci_bind_by_name($stid,':pass',$rpassword,40);
 oci_bind_by_name($stid,':id_user',$id_user,40);
+oci_bind_by_name($stid,':admin',$adm,40);
+oci_bind_by_name($stid,':phone',$phone,40);
+oci_bind_by_name($stid,':addre',$address,40);
+oci_bind_by_name($stid,':email',$email,40);
 
 oci_execute($stid);
 /*
@@ -28,6 +32,21 @@ if($rpassword==='USER NOT FOUND'){setcookie("is_logged","USER_NOT_FOUND",time()+
             else {setcookie("is_logged","LOGGED",time()+(86400*10),"/");
                   setcookie("user",$_POST['uname'],time()+(86400*10),"/");
                   setcookie("userID",$id_user,time()+(86400*10),"/");
+                  $thisUser=array(
+                    'id'=>$id_user,
+                    'admin'=>$adm,
+                    'phone'=>$phone,
+                    'addre'=>$address,
+                    'email'=>$email
+                  );
+                  $fileContent = file_get_contents('./jsons/current_fellow.json');
+                  $information = json_decode($fileContent); 
+
+	              array_push($information,$thisUser);
+                  $formatedInfo=json_encode($information);
+                  file_put_contents('./jsons/current_fellow.json',$formatedInfo);
+                  fclose('./jsons/current_fellow.json');
+
                   header('Location:index.php');
                 }
 
