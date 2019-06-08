@@ -1,0 +1,63 @@
+.corp div {
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin-right: 5%;
+            margin-top:3%;
+            padding-left:20px;
+            background-color: GrayText;
+            
+        }
+        .corp {
+            display: flex;
+            margin-left:17%;
+            margin-top: 3%;
+        }
+        a {
+            text-decoration: none;
+            color: #fcac00;;
+        }
+
+        }
+
+        @media only screen and (max-width: 1400px) {
+            body{
+            margin-left:0px;
+            margin-right:0px;
+        }
+    .corp {
+        display: flex;
+            margin-left:12%;
+            margin-top: 3%;
+        }
+    }
+    @media only screen and (max-width: 1000px){
+        body{
+            margin-left:0px;
+            margin-right:0px;
+        }
+        .corp {
+            display: flex;
+            flex-wrap:wrap;
+            margin-left:25%;
+            margin-top: 3%;
+        }
+        }
+        @media only screen and (min-width: 1800px) {
+            .corp div {
+            border: solid;
+            border-radius: 2%;
+            width: 464px;
+            margin-left: 12%;
+            margin-top:3%;
+            padding-left:20px;
+            background-color: GrayText;
+            
+        }
+        .corp {
+            display: flex;
+            margin-left:5%;
+            margin-top: 1%;
+        }
+
+        }
