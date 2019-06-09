@@ -10,7 +10,7 @@ if (isset($_GET['ym'])) {
     $ym = date('Y-m');
 }
 
-$myform="'cos.php'";
+$myform="'contact.php'";
 
 // Check format
 $timestamp = strtotime($ym . '-01');  // the first day of the month
@@ -74,7 +74,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     $week .= '<td class="work">
     ';
     }
-    $week .=  $day . '<a href="cos.php"><p class="button">Make an appointment</p></a>
+    $week .=  $day . '<a href="contact.php"><p class="button">Make an appointment</p></a>
 </td>';
 
     // Sunday OR last day of the month
@@ -125,7 +125,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
-					<a href="cos.php"><img  src="images/cos.jpg" alt="" name="cos" id="cos"></a>
+				
 
 			</form>
 		</div>
@@ -186,7 +186,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <li class="list-inline-item"><span class="title"><?= $title; ?></span></li>
             <li class="list-inline-item"><a href="?ym=<?= $next; ?>" class="btn btn-link">next &gt;</a></li>
         </ul>
-        <p class="text-right"><a href="booking.php">Today</a></p>
+        <p class="text-right"><a href="calendar.php">Today</a></p>
         <table class="table table-bordered">
             <td>
                 <tr>

@@ -19,8 +19,7 @@
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
-					<a href="cos.php"><img  src="images/cos.jpg" alt="" name="cos" id="cos"></a>
-				
+					
 			</form>
 		</div>
 		<div class="navigation">
@@ -86,7 +85,7 @@
 				<h2>servicii</h2>
 					<ul>
 						<li>
-							<a href="serv/revizii.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
 							<div>
 								<h3>Revizii</h3>
 								<p>
@@ -100,7 +99,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="serv/cadru.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
 							<div>
 								<h3>Cadru</h3>
 								<p>
@@ -112,7 +111,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="serv/furca.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
 							<div>
 								<h3>Furca si shock</h3>
 								<p>
@@ -127,7 +126,7 @@
 						</li>
 
 						<li>
-							<a href="serv/roti.php" class="figure"><img src="images/roti.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/roti.jpg" alt=""></a>
 							<div>
 								<h3>Roti</h3>
 								<p>									
@@ -139,7 +138,7 @@
 						</li>
 
 						<li>
-							<a href="serv/frane.php" class="figure"><img src="images/frane.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/frane.jpg" alt=""></a>
 							<div>
 								<h3>Frane</h3>
 								<p>									
@@ -150,7 +149,7 @@
 						</li>
 
 						<li>
-					     	<a href="serv/transmisie.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
+					     	<a href="formularClient.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
 							<div>
 								<h3>Transmisie</h3>
 								<p>									
@@ -162,7 +161,7 @@
 						</li>
 
 						<li>
-							<a href="serv/alte.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
+							<a href="formularClient.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
 							<div>
 								<h3>Diverse</h3>
 								<p>									
@@ -180,25 +179,25 @@
 				<h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="serv/revizii.html">revizii</a>
+							<a href="formularClient.php">revizii</a>
 						</li>
 						<li>
-							<a href="serv/cadru.html">cadru</a>
+							<a href="formularClient.html">cadru</a>
 						</li>
 						<li>
-							<a href="serv/furca.html">furca si shock</a>
+							<a href="formularClient.html">furca si shock</a>
 						</li>
 						<li>
-							<a href="serv/roti.html">roti</a>
+							<a href="formularClient.html">roti</a>
 						</li>
 						<li>
-							<a href="serv/frane.html">frane</a>
+							<a href="formularClient.html">frane</a>
 						</li>
 						<li>
-							<a href="serv/transmisie.html">transmisie</a>
+							<a href="formularClient.html">transmisie</a>
 						</li>
 						<li>
-							<a href="serv/.html">diverse</a>
+							<a href="formularClient.html">diverse</a>
 						</li>	
 					</ul>
 				</div>

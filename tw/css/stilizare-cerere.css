@@ -15,10 +15,18 @@
         }
         a {
             text-decoration: none;
-            color: #fcac00;;
+            color: #fcac00;
         }
-
+        #body .content .section .k2 h2 {
+            color: #1e3158;
+            font-family: 'Lato-Black';
+            font-size: 21px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
         }
+        
 
         @media only screen and (max-width: 1400px) {
             body{

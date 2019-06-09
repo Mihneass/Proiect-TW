@@ -6,9 +6,6 @@
 	<meta charset="UTF-8">
 	<title>imprumuturi</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/stilizare-butoane.css" />
-    <link rel="stylesheet" href="css/stilizare-cerere.css" />
 	
 </head>
 <body>
@@ -24,7 +21,7 @@
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
-					
+				
 
 			</form>
 		</div>
@@ -76,31 +73,54 @@
 			<div class="section">
 				<div class="contact">
 					
+				<h1 class="avatar">Formular</h1>
+
+   
+        <form class="continut" action="booking.php">
+            <div class="imgcontainer">
+               
+
+            </div>
+
+            <div class="container">
+
+               
+                <br />
+
+                <input type="text" placeholder="Enter Username" id="uname" required>
+                <input type="email" placeholder="Enter Mail" id="mail" required>
+
+                <br />
+               
+                <br />
+                <input type="text" placeholder="Enter Object Name" id="object" required>
+                <input type="number" placeholder="Enter Number" id="price" required>
+
+                <br />
+                <label for="detalii"><b>Details</b></label>
+                <br />
+
+                <textarea rows="4" cols="50" class="detalii" placeholder="Enter Details" id="detalii">
+                </textarea>
+
+
+                <input type="file" name="myfile"  >
+
+                <br />
+                <label for="address"><b>Address</b></label>
+                <br />
+                <input type="text" placeholder="Enter Address" id="address" required>
+
+
+                <button type="submit">Submit</button>
+
+
+            </div>
+
+
+
+        </form>
 					
-					<div class="corp">
-        
-		<div class="cerere1">
-			<a href="CerereTrimisa.php">
-				<p>Trimis acum .. ore</p>
-				<p>Ultima actualizare:</p>
-				<p>Detaliile cererii:</p>
-				<p>Status: In asteptare</p>
-			</a>
-		</div>
-	
-	
-		<div class="cerere2">
-   <a href="CerereTrimisa.php">
-			<p>Trimis acum .. ore</p>
-			<p>Ultima actualizare:</p>
-			<p>Detaliile cererii:</p>
-			<p>Status: In asteptare</p>
-	</a>
-	</div>
-
-
-</div>
-
 				</div>
 			</div>
 			<div class="sidebar">
@@ -199,5 +219,7 @@
 			</div>
 		</div>
 	</body>
-				
+	<?php 
+					
+						?>
 	</html>
