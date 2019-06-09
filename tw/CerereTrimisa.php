@@ -128,7 +128,32 @@ echo "
 				<p>".$row['DETALII']."</p>
 				
 			</a>
+			</div>
 		</div>";
+
+		echo "
+
+		
+        
+		<div class=".'"'."brr".'"'."></br></br>
+					<table class=".'"'."table4".'"'.">
+						
+						<tr>
+							<th>
+								<form action=".'"'."CerereTrimisa.php".'"'." method=".'"'."POST".'"'.">
+								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">clent</button></form>								
+							</th>
+							<th>
+								<form action=".'"'."contact.php".'"'." method=".'"'."POST".'"'.">
+								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">accept</button></form>								
+							</th>
+							<th>
+								<form action=".'"'."rejectFormular.php".'"'." method=".'"'."POST".'"'.">
+								<button type=".'"'."submit".'"'." name=".'"'."reject".'"'.">reject</button></form>								
+							</th>
+						</tr>
+
+					</table>";
 	
 	?>
 		
