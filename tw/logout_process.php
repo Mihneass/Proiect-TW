@@ -1,6 +1,8 @@
 <?php
 setcookie("is_logged",0,time()+(86400*10),"/");
     setcookie("user",0,time()-(86400*10),"/");
+   // setcookie("userID",0,time()-(86400*10),"/");
+    setcookie("userAdmin",0,time()-(86400*10),"/");
     $thisUser=array();
     $fileContent = file_get_contents('./jsons/current_fellow.json');
     $thisUser=json_encode($thisUser);

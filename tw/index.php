@@ -13,7 +13,7 @@ if(!isset($_COOKIE['is_logged'])){
 	setcookie("is_logged",0,time()+(86400*10),"/");
 	setcookie("user",0,time()-(86400*10),"/");
 	setcookie("userID",0,time()-(86400*10),"/");
-
+	setcookie("userAdmin",0,time()-(86400*10),"/");
 }
 
 

@@ -125,7 +125,7 @@ echo "
 		<div class=".'"'."k2".'"'.">
 			<h2>detalii suplimentare</h2>
 		<a >
-				<p>la pedala dreapta e o problema</p>
+				<p>".$row['DETALII']."</p>
 				
 			</a>
 		</div>";

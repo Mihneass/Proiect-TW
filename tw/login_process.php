@@ -32,6 +32,7 @@ if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/
             else {setcookie("is_logged","LOGGED",time()+(86400*10),"/");
                   setcookie("user",$_POST['uname'],time()+(86400*10),"/");
                   setcookie("userID",$id_user,time()+(86400*10),"/");
+                  setcookie("userAdmin",$adm,time()+(86400*10),"/");
                   $thisUser=array(
                     'id'=>$id_user,
                     'admin'=>$adm,
@@ -72,5 +73,5 @@ if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/
                 
                             header('Location:index.php');
                           }
-                          }
+                }
 ?>

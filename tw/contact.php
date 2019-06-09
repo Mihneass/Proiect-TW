@@ -79,32 +79,12 @@
 					
 					<div class="corp" id="corp">
         <?php
-		/*
-		<div class="cerere1">
-			<a href="CerereTrimisa.php">
-				<p>Trimis acum .. ore</p>
-				<p>Ultima actualizare:</p>
-				<p>Detaliile cererii:</p>
-				<p>Status: In asteptare</p>
-			</a>
-		</div>
-	
-	
-		<div class="cerere2">
-   <a href="CerereTrimisa.php">
-			<p>Trimis acum .. ore</p>
-			<p>Ultima actualizare:</p>
-			<p>Detaliile cererii:</p>
-			<p>Status: In asteptare</p>
-	</a>
-	</div>
-	*/
+//echo $_COOKIE['userID'];
 ?>
 <script>
    let body = document.getElementById('contact');
-   const MAX_NUMBER = 1000;
-   const MIN_DISTANCE = 300; // pixels
 
+   var current="<?php echo $_COOKIE['userID'] ?>";
 
    fetch('jsons/requests.json')
    .then(response => {
@@ -117,9 +97,13 @@
        this.users = json;
        console.log(this.users);
 	   
+	   var adminState="<?php echo $_COOKIE['userAdmin'] ?>";
+	   if(adminState==="false")var toCount=1000;
+	   				     else  var toCount=15;
 
 let i=0;
-   while(i<15){
+   while(i<toCount){
+	if(json[i].id_user===current || adminState!="false"){
 	const pg = document.createElement('div');
 	pg.className += "corp";
    const p = document.createElement('div');
@@ -141,7 +125,7 @@ let i=0;
    txt5.innerText=str2;
    a.appendChild(txt5);
 pg.appendChild(p);
-   body.appendChild(pg);
+   body.appendChild(pg);}
    i++;
    }
    
