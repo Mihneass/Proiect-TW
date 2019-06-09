@@ -87,8 +87,19 @@
                
                 <br />
 				 <br />
-               
-                <br />
+				 <select name="schedule" id="schedule">
+								<option value="revizii">Revizii</option>
+								<option value="cadru">Cadru</option>	
+								<option value="fands">Furca Si Shock</option>
+								<option value="roti">Roti</option>	
+								<option value="frane">Frane</option>
+								<option value="transmisie">Transmisie</option>	
+								<option value="diverse">Diverse</option>	
+							</select>
+				<br />
+				<br />
+				 <br />
+				
                 <input type="text" placeholder="Enter Object Name" id="object" required>
                 <input type="number" placeholder="Enter Number" id="price" required>
 
