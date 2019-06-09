@@ -74,7 +74,7 @@
 	<div id="body">
 		<div class="content">
 			<div class="section">
-				<div class="contact">
+				<div class="contact"id="contact">
 					
 					
 					<div class="corp" id="corp">
@@ -101,7 +101,7 @@
 	*/
 ?>
 <script>
-   let body = document.getElementById('corp');
+   let body = document.getElementById('contact');
    const MAX_NUMBER = 1000;
    const MIN_DISTANCE = 300; // pixels
 
@@ -120,7 +120,10 @@
 
 let i=0;
    while(i<15){
+	const pg = document.createElement('div');
+	pg.className += "corp";
    const p = document.createElement('div');
+   
    p.setAttribute("class","cerere");
    const a= document.createElement('a');
    let destination="CerereTrimisa.php?page=";
@@ -137,8 +140,8 @@ let i=0;
    str2=str2.concat(this.users[i].situation);
    txt5.innerText=str2;
    a.appendChild(txt5);
-
-   body.appendChild(p);
+pg.appendChild(p);
+   body.appendChild(pg);
    i++;
    }
    
@@ -153,6 +156,8 @@ let j=0;
 	j=i+5;
 
     while(i<j){
+		const pg = document.createElement('div');
+	pg.className += "corp";
 	const p = document.createElement('div');
    p.setAttribute("class","cerere");
    const a= document.createElement('a');
@@ -171,7 +176,8 @@ let j=0;
    txt5.innerText=str2;
    a.appendChild(txt5);
 
-   body.appendChild(p);
+   pg.appendChild(p);
+   body.appendChild(pg);
    i++;
 		}
 		body.appendChild(more);
