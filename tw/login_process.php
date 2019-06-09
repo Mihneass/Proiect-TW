@@ -47,7 +47,33 @@ if($rpassword==='USER NOT FOUND'){setcookie("is_logged","USER_NOT_FOUND",time()+
                   file_put_contents('./jsons/current_fellow.json',$formatedInfo);
                   fclose('./jsons/current_fellow.json');
 
+                  $conn = oci_connect("student", "student", "localhost:1521/xe");
+			if (!$conn) {
+  			$m = oci_error();
+   			echo $m['message'], "\n";
+   			exit;
+						}
+			$enquiry="SELECT * FROM cereri";
+			$stid = oci_parse($conn, $enquiry);
+			oci_execute($stid);	
+            while($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)){
+                $thisReq=array(
+                    'id'=>$row['IDK'],
+                    'id_user'=>$row['ID_USER'],
+                    'situation'=>$row['SITUATIE'],
+                    'obj_name'=>$row['NUME_OBIECT'],
+                    'obj_nr'=>$row['NR_OBIECTE'],
+                    'address'=>$row['ADDRESS']
+                  );
+                  $fileContent = file_get_contents('./jsons/requests.json');
+                  $information = json_decode($fileContent); 
+
+	              array_push($information,$thisReq);
+                  $formatedInfo=json_encode($information);
+                  file_put_contents('./jsons/requests.json',$formatedInfo);
+
+		  
                   header('Location:index.php');
-                }
+                }}
 
 ?>

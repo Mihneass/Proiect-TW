@@ -5,6 +5,8 @@ setcookie("is_logged",0,time()+(86400*10),"/");
     $fileContent = file_get_contents('./jsons/current_fellow.json');
     $thisUser=json_encode($thisUser);
     file_put_contents('./jsons/current_fellow.json',$thisUser);
+    file_put_contents('./jsons/requests.json',$thisUser);
     fclose('./jsons/current_fellow.json');
+    fclose('./jsons/requests.json');
     header('Location: index.php');
 ?>
