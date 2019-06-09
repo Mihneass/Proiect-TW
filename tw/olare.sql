@@ -168,7 +168,7 @@ BEGIN
       v_username:=v_nume||v_i;
       v_mail:=v_username||'@'||lista_address(TRUNC(DBMS_RANDOM.VALUE(0,lista_address.count))+1)||'.com';
                         v_admin:='false';
-                        if(v_i=4)then
+                        if(v_i<4)then
                         v_admin:='true';
                          END IF;
                         
