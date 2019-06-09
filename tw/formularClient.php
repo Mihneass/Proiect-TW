@@ -86,9 +86,14 @@
 
                
                 <br />
-
-                <input type="text" placeholder="Enter Username" id="uname" required>
-                <input type="email" placeholder="Enter Mail" id="mail" required>
+				<label for="dnume"><b>Introduceti nume</b></label>
+				<input type="text" placeholder="Enter Username" id="uname" required>
+				<br />
+				<label for="dmail"><b>Introduceti mail</b></label>
+				<input type="email" placeholder="Enter Mail" id="mail" required>
+				<br />
+				<label for="dhour"><b>Introduceti ora</b></label>
+				<input type="time" placeholder="Enter hour" id="hour" required>
 
                 <br />
                

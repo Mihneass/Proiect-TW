@@ -85,7 +85,7 @@
 				<h2>servicii</h2>
 					<ul>
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/drinking.jpg" alt=""></a>
 							<div>
 								<h3>Revizii</h3>
 								<p>
@@ -99,7 +99,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/navigator.jpg" alt=""></a>
 							<div>
 								<h3>Cadru</h3>
 								<p>
@@ -111,7 +111,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/tool-box.jpg" alt=""></a>
 							<div>
 								<h3>Furca si shock</h3>
 								<p>
@@ -126,7 +126,7 @@
 						</li>
 
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/roti.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/roti.jpg" alt=""></a>
 							<div>
 								<h3>Roti</h3>
 								<p>									
@@ -138,7 +138,7 @@
 						</li>
 
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/frane.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/frane.jpg" alt=""></a>
 							<div>
 								<h3>Frane</h3>
 								<p>									
@@ -149,7 +149,7 @@
 						</li>
 
 						<li>
-					     	<a href="formularClient.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
+					     	<a href="booking.php" class="figure"><img src="images/transmisie.jpg" alt=""></a>
 							<div>
 								<h3>Transmisie</h3>
 								<p>									
@@ -161,7 +161,7 @@
 						</li>
 
 						<li>
-							<a href="formularClient.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
+							<a href="booking.php" class="figure"><img src="images/diverse.jpg" alt=""></a>
 							<div>
 								<h3>Diverse</h3>
 								<p>									
@@ -179,25 +179,25 @@
 				<h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="formularClient.php">revizii</a>
+							<a href="booking.php">revizii</a>
 						</li>
 						<li>
-							<a href="formularClient.html">cadru</a>
+							<a href="booking.html">cadru</a>
 						</li>
 						<li>
-							<a href="formularClient.html">furca si shock</a>
+							<a href="booking.html">furca si shock</a>
 						</li>
 						<li>
-							<a href="formularClient.html">roti</a>
+							<a href="booking.html">roti</a>
 						</li>
 						<li>
-							<a href="formularClient.html">frane</a>
+							<a href="booking.html">frane</a>
 						</li>
 						<li>
-							<a href="formularClient.html">transmisie</a>
+							<a href="booking.html">transmisie</a>
 						</li>
 						<li>
-							<a href="formularClient.html">diverse</a>
+							<a href="booking.html">diverse</a>
 						</li>	
 					</ul>
 				</div>

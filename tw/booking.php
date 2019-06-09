@@ -10,7 +10,7 @@ if (isset($_GET['ym'])) {
     $ym = date('Y-m');
 }
 
-$myform="'contact.php'";
+$myform="'formularClient.php'";
 
 // Check format
 $timestamp = strtotime($ym . '-01');  // the first day of the month
@@ -74,7 +74,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     $week .= '<td class="work">
     ';
     }
-    $week .=  $day . '<a href="contact.php"><p class="button">Make an appointment</p></a>
+    $week .=  $day . '<a href="formularClient.php"><p class="button">Make an appointment</p></a>
 </td>';
 
     // Sunday OR last day of the month
