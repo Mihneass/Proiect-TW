@@ -89,8 +89,69 @@
 					</ul>
 				</div>
 				<div class="services">
-					<h2>ale iese</h2>
-		
+					
+					<table class="table">
+							<tr >
+								<th><h1>Servicii</h1></th>
+								<td><h1>Pret</h1></td>
+							</tr>"
+							<tr >
+								<th><h2>Reglat cuvete</h2></th>
+								<td><h2>10</h2></td>
+							</tr>"
+							<tr >	
+								<th><h2>Service cuvete</h2></th> 
+								<td><h2>40</h2></td> 
+							</tr>"
+							<tr >
+								<th><h2>Schimbat cuvete</h2></th>
+								<td><h2>50</h2></td>
+							</tr>"
+							<tr >
+								<th><h2>Montat /schimbat furca</h2></th>
+								<td><h2>50</h2></td>
+							</tr>"
+							<tr >
+								<th><h2>Taiat teava furca/ tija sa/ ghidon</h2></th>
+								<td><h2>20</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Montat/ schimbat tija sa/ sa</h2></th> 
+								<td><h2>15</h2></td> 
+								
+							</tr>"
+							<tr >
+								<th><h2>Montat/ schimbat pipa/ ghidon</h2></th>
+								<td><h2>20-40</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Indreptat ureche shimbator</h2></th>
+								<td><h2>25</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Indreptat/ aliniat urechi cadru sau furca</h2></th>
+								<td><h2>30</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Montaj niplu/ nit suport bidon cadru</h2></th> 
+								<td><h2>25</h2></td> 
+							</tr>"
+							<tr >
+								
+								
+								
+								
+								
+					
+					</table>
+	
+	
+	
+	
 				</div>
 			</div>
 			<div class="sidebar">
