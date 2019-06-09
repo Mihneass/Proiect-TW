@@ -42,7 +42,7 @@ CREATE TABLE piese (
 /
 SET SERVEROUTPUT ON;
 DECLARE
- TYPE varr IS VARRAY(1000) OF varchar2(255);
+ TYPE varr IS VARRAY(10070) OF varchar2(2755);
  
    lista_address varr := varr('gmail','yahoo','live','hotmail','me','outlook','aol','zoho');
    lista_address_oras varr := varr('Iasi','Galati','Bucuresti','Cluj','Roman','Buzau','Tulcea','Tecuci','Bacau','Vaslui','Barlad','Suceava','Botosani'
@@ -101,6 +101,8 @@ DECLARE
   lista_tari varr := varr('Rusia','Romania','Germania','Grecia','Turcia','Spania','Anglia','Suedia','Albania','Bulgaria'); 
   lista_gen varr := varr('Drama','Romance','Poetry','Fiction','Fabule','Horror','Psihologic','Jurnal','Carte de colorat',
   'Povesti pentru copii','Istorie'); 
+  lista_des varr := varr('Pedalele au o problema estetica.','Asi dori sa imi schimbati furca cu cea pe care o voi aduce eu.','+ reparatii la suspensie',
+  'Ar fi super ok sa o reparati pana pe 22 luna aceasta.','roata din fata are un joc','vrea totul pe culoare mov','+reglare frane','am folosit bicicleta pe autostrada');
    
   v_servici VARCHAR2(255);
   v_nume VARCHAR2(255);
@@ -179,6 +181,7 @@ BEGIN
    
    FOR v_i IN 1..60 LOOP
    
+     v_det := lista_des(TRUNC(DBMS_RANDOM.VALUE(0,lista_des.count))+1);
       v_oras := lista_address_oras(TRUNC(DBMS_RANDOM.VALUE(0,lista_address_oras.count))+1);
       v_strada := lista_address_strada(TRUNC(DBMS_RANDOM.VALUE(0,lista_address_strada.count))+1);
       v_address:='Oras: '||v_oras||', strada: '||v_strada|| ' nr: '||TRUNC(DBMS_RANDOM.VALUE(1,765));
