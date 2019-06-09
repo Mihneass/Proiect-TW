@@ -76,44 +76,61 @@
 			<div class="section">
 				<div class="contact">
 					
-					
-					<div class="corp">
+	<?php
+$conn = oci_connect("student", "student", "localhost:1521/xe");
+if (!$conn) {
+  $m = oci_error();
+   echo $m['message'], "\n";
+   exit;
+			}
+$enquiry="SELECT * FROM CERERI WHERE IDK=:iddd";
+
+$stid = oci_parse($conn, $enquiry);
+oci_bind_by_name($stid, ":iddd", $_GET['page']);
+
+oci_execute($stid);
+$i=0;
+$currPag=1;
+$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+
+		echo "			
+					<div class=".'"'."corp".'"'.">
         
-		<div class="k2">
+		<div class=".'"'."k2".'"'.">
 			<h2 >date despre timp</h2>
-		<a >
-				<p>data aleasa de client</p>
-				<p>timp estimativ</p>
-				<p>termen limita</p>
+		<a>";
+		echo	"<p>data aleasa de client: ".$row['CREATED_AT']."</p>";
+		echo	"<p>timp estimativ: ".$row['CREATED_AT']."</p>";
+		echo	"<p>termen limita: ".$row['CREATED_AT']."</p>
 				
 			</a>
 		</div>
 
 </div>
-<div class="corp">
+";
+echo "
+<div class=".'"'."corp".'"'.">
         
-		<div class="k2">
+		<div class=".'"'."k2".'"'.">
 			<h2>piese folosite</h2>
-		<a >
-				<p>frane</p>
-				<p>roata</p>
-				<p>aa</p>
-				<p>ff</p>
-			</a>
+		<a >";
+		echo "		<p>Piesele necesare: ".$row['NUME_OBIECT'].", in numar de ".$row['NR_OBIECTE']."</p>  ";
+echo "			</a>
 		</div>
 
-</div>
-<div class="corp">
+</div>";
+echo "
+<div class=".'"'."corp".'"'.">
         
-		<div class="k2">
+		<div class=".'"'."k2".'"'.">
 			<h2>detalii suplimentare</h2>
 		<a >
 				<p>la pedala dreapta e o problema</p>
 				
 			</a>
-		</div>
+		</div>";
 	
-	
+	?>
 		
 
 </div>
