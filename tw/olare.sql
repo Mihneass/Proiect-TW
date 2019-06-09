@@ -27,6 +27,7 @@ CREATE TABLE cereri (
   nume_obiect  VARCHAR2(50) NOT NULL,
   nr_obiecte INT NOT NULL,
   address  VARCHAR2(150) NOT NULL,
+  detalii  VARCHAR2(755),
   created_at DATE,
   updated_at DATE,
   CONSTRAINT fk_cereri_idk FOREIGN KEY (idk) REFERENCES useri(id_user)
@@ -119,7 +120,7 @@ DECLARE
   v_gen VARCHAR2(255);
  
   
-  
+  v_det VARCHAR2(755);
   v_oras VARCHAR2(255);
   v_strada VARCHAR2(255);
   v_phone VARCHAR2(255);
@@ -184,7 +185,7 @@ BEGIN
       
       v_servici := lista_piese(TRUNC(DBMS_RANDOM.VALUE(0,lista_piese.count))+1);
       v_temp:=DBMS_RANDOM.VALUE(1,3);
-       v_si:='reected';
+       v_si:='rejected';
       if(v_temp=1)then
       v_si:='pending';
       end if;
@@ -195,7 +196,7 @@ BEGIN
        
     
                         
-    insert into cereri values(v_i,(DBMS_RANDOM.VALUE(0,1000)+1),v_si,v_servici,(DBMS_RANDOM.VALUE(0,10)+1),v_address, sysdate, sysdate);
+    insert into cereri values(v_i,(DBMS_RANDOM.VALUE(0,1000)+1),v_si,v_servici,(DBMS_RANDOM.VALUE(0,10)),v_address,v_det, sysdate, sysdate);
    END LOOP;
    DBMS_OUTPUT.PUT_LINE('Inserarea a 60 cereri... GATA !');
    
