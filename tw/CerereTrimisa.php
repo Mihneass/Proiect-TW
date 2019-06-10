@@ -152,6 +152,7 @@ $row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 								<form action=".'"'."process_delete_client.php".'"'." method=".'"'."POST".'"';
 								
 								echo ">
+								<p name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
 								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">Understood</button></form>								
 							</th>
 							<th ";
