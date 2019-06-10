@@ -18,6 +18,7 @@
 				
 				echo "</form>";
 			}
+			
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
@@ -76,7 +77,8 @@
 				<h1 class="avatar">Motiv reject</h1>
 
    
-        <form class="continut" action="contact.php">
+        <form method="POST" class="continut" action="process_decline.php">
+	<?php	echo "<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$_POST['request-id'].'"'." hidden>"; ?>
             <div class="imgcontainer">
                
 
@@ -92,7 +94,7 @@
                 <label for="detalii"><b>Details</b></label>
                 <br />
 
-                <textarea rows="4" cols="50" class="detalii" placeholder="Enter Details" id="detalii">
+                <textarea rows="4" cols="50" name="reason" class="detalii" placeholder="Enter Details" id="detalii">
                 </textarea>
 
 				<br /> <br />

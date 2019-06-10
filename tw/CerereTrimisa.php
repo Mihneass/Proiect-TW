@@ -152,19 +152,21 @@ $row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 								<form action=".'"'."process_delete_client.php".'"'." method=".'"'."POST".'"';
 								
 								echo ">
-								<p name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
+								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
 								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">Understood</button></form>								
 							</th>
 							<th ";
-							if($row1['ADMINK']==='false')echo "hidden";
+							if($row1['ADMINK']==='false' || $row['SITUATIE']!=='pending')echo "hidden";
 							echo ">
-								<form action=".'"'."contact.php".'"'." method=".'"'."POST".'"'.">
+								<form action=".'"'."acceptRequest.php".'"'." method=".'"'."POST".'"'.">
+								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
 								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">Accept</button></form>								
 							</th>
 							<th ";
-							if($row1['ADMINK']==='false')echo "hidden";
+							if($row1['ADMINK']==='false' || $row['SITUATIE']!=='pending')echo "hidden";
 							echo ">
 								<form action=".'"'."rejectFormular.php".'"'." method=".'"'."POST".'"'.">
+								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
 								<button type=".'"'."submit".'"'." name=".'"'."reject".'"'.">Reject</button></form>								
 							</th>
 						</tr>

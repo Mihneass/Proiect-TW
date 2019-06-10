@@ -23,7 +23,7 @@ $rc_row = oci_fetch_array($rc, OCI_ASSOC+OCI_RETURN_NULLS);
 echo $rpassword;
 if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/");
             echo $enquiry;
-           // header('Location: index.php');
+      //      header('Location: index.php');
             }
         else if($rpassword!=$_POST['pass']){
             setcookie("is_logged","PASS_NOT_FOUND",time()+(86400*10),"/");
