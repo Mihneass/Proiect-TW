@@ -18,6 +18,7 @@
 				
 				echo "</form>";
 			}
+			else header('Location: index.php');
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
@@ -96,6 +97,7 @@
 								<option value="transmisie">Transmisie</option>	
 								<option value="diverse">Diverse</option>	
 							</select>
+							<?php echo $_POST['service-type']; ?>
 				<br />
 				<br />
 				 <br />

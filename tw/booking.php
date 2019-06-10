@@ -74,7 +74,10 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     $week .= '<td class="work">
     ';
     }
-    $week .=  $day . '<a href="formularClient.php"><p class="button">Make an appointment</p></a>
+	$week .=  $day . '<form action="formularClient.php" method="POST">';
+	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-type".'"'." value=".'"'.$_GET['page'].'"'." hidden>";
+	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-date".'"'." value=".'"'.$today.'"'." hidden>";
+	$week .=	'<button type="submit">Make an appointment</button></form>
 </td>';
 
     // Sunday OR last day of the month
@@ -101,19 +104,19 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 	<title>PHP Calendar</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/stilizare-calendar.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/stilizare-butoane.css">
+	<style>
 	
+	</style>
 </head>
 <body>
 	<div id="header">
 		<div>
 		<?php
-		setcookie("schedule2",$_POST['schedule2'],time()-86400);
-		setcookie("INp",$_POST['INp'],time()-86400);
+
 			if($_COOKIE['is_logged']==="LOGGED"){
 				echo "<form action=".'"'."logout_process.php".'"'." method=".'"'."POST".'"'." >";	
 				echo "<button type=".'"'."submit".'"'."name=".'"'."logbutton".'"'.">LOGOUT</button>";
