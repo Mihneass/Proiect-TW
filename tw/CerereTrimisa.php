@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+﻿﻿<!DOCTYPE HTML>
 <apex:page  applyHtmlTag="false">
 
 <html>
@@ -101,13 +101,14 @@ $row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 		<a>";
 		echo	"<p>data aleasa de client: ".$row['CREATED_AT']."</p>";
 		echo	"<p>timp estimativ: ".$row['CREATED_AT']."</p>";
-		echo	"<p>termen limita: ".$row['CREATED_AT']."</p>
-				
-			</a>
+		echo	"<p>termen limita: ".$row['CREATED_AT']."</p>";
+		echo	"<p>Current situation: </p><br><h3>".$row['SITUATIE']."</h3>";
+		echo	"</a>
 		</div>
 
 </div>
 ";
+
 echo "
 <div class=".'"'."corp".'"'.">
         
@@ -131,25 +132,39 @@ echo "
 			</div>
 		</div>";
 
+
+		$enquiry="SELECT * FROM USERI WHERE ID_USER=:iddd";
+
+$stid = oci_parse($conn, $enquiry);
+oci_bind_by_name($stid, ":iddd", $_COOKIE['userID']);
+
+oci_execute($stid);
+$row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 		echo "
 
-		
-        
 		<div class=".'"'."brr".'"'."></br></br>
 					<table class=".'"'."table4".'"'.">
 						
 						<tr>
-							<th>
-								<form action=".'"'."CerereTrimisa.php".'"'." method=".'"'."POST".'"'.">
-								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">clent</button></form>								
+							<th ";
+							if($row1['ADMINK']==='true' || $row['SITUATIE']==='pending')echo "hidden";
+							echo ">
+								<form action=".'"'."process_delete_client.php".'"'." method=".'"'."POST".'"';
+								
+								echo ">
+								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">Understood</button></form>								
 							</th>
-							<th>
+							<th ";
+							if($row1['ADMINK']==='false')echo "hidden";
+							echo ">
 								<form action=".'"'."contact.php".'"'." method=".'"'."POST".'"'.">
-								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">accept</button></form>								
+								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">Accept</button></form>								
 							</th>
-							<th>
+							<th ";
+							if($row1['ADMINK']==='false')echo "hidden";
+							echo ">
 								<form action=".'"'."rejectFormular.php".'"'." method=".'"'."POST".'"'.">
-								<button type=".'"'."submit".'"'." name=".'"'."reject".'"'.">reject</button></form>								
+								<button type=".'"'."submit".'"'." name=".'"'."reject".'"'.">Reject</button></form>								
 							</th>
 						</tr>
 
