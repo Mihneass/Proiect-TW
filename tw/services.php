@@ -194,8 +194,8 @@
 						</li>
 						<li>
 						<div>
-						<form action="make-pdf.php" method="POST">
-							<button type="submit">Make pdf</button>
+						<form action="formularAdmin.php" method="POST">
+							<button type="submit">Make request</button>
 							</form>
 
 						

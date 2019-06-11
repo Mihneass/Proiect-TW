@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <apex:page  applyHtmlTag="false">
 
 <html>
@@ -6,9 +6,6 @@
 	<meta charset="UTF-8">
 	<title>imprumuturi</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/stilizare-butoane.css" />
-    <link rel="stylesheet" href="css/stilizare-cerere.css" />
 	
 </head>
 <body>
@@ -21,10 +18,11 @@
 				
 				echo "</form>";
 			}
+			
 			?>
 			<a href="index.php" class="logo"><img src="images/logo.png" alt=""></a>
 			<form action="index.php">
-					
+				
 
 			</form>
 		</div>
@@ -76,107 +74,41 @@
 			<div class="section">
 				<div class="contact">
 					
-	<?php
-$conn = oci_connect("student", "student", "localhost:1521/xe");
-if (!$conn) {
-  $m = oci_error();
-   echo $m['message'], "\n";
-   exit;
-			}
-$enquiry="SELECT * FROM CERERI WHERE IDK=:iddd";
+				<h1 class="avatar">Oferire pret estimativ</h1>
 
-$stid = oci_parse($conn, $enquiry);
-oci_bind_by_name($stid, ":iddd", $_GET['page']);
-
-oci_execute($stid);
-$i=0;
-$currPag=1;
-$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
-
-		echo "			
-					<div class=".'"'."corp".'"'.">
-        
-		<div class=".'"'."k2".'"'.">
-			<h2 >date despre timp</h2>
-		<a>";
-		echo	"<p>data aleasa de client: ".$row['CREATED_AT']."</p>";
-		echo	"<p>timp estimativ: ".$row['CREATED_AT']."</p>";
-		echo	"<p>termen limita: ".$row['CREATED_AT']."</p>";
-		echo	"<p>Current situation: </p><br><h3>".$row['SITUATIE']."</h3>";
-		echo	"</a>
-		</div>
-
-</div>
-";
-
-echo "
-<div class=".'"'."corp".'"'.">
-        
-		<div class=".'"'."k2".'"'.">
-			<h2>piese folosite</h2>
-		<a >";
-		echo "		<p>Piesele necesare: ".$row['NUME_OBIECT'].", in numar de ".$row['NR_OBIECTE']."</p>  ";
-echo "			</a>
-		</div>
-
-</div>";
-echo "
-<div class=".'"'."corp".'"'.">
-        
-		<div class=".'"'."k2".'"'.">
-			<h2>detalii suplimentare</h2>
-		<a >
-				<p>".$row['DETALII']."</p>
-				
-			</a>
-			</div>
-		</div>";
-
-
-		$enquiry="SELECT * FROM USERI WHERE ID_USER=:iddd";
-
-$stid = oci_parse($conn, $enquiry);
-oci_bind_by_name($stid, ":iddd", $_COOKIE['userID']);
-
-oci_execute($stid);
-$row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
-		echo "
-
-		<div class=".'"'."brr".'"'."></br></br>
-					<table class=".'"'."table4".'"'.">
-						
-						<tr>
-							<th ";
-							if($row1['ADMINK']==='true' || $row['SITUATIE']==='pending')echo "hidden";
-							echo ">
-								<form action=".'"'."process_delete_client.php".'"'." method=".'"'."POST".'"';
-								
-								echo ">
-								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
-								<button type=".'"'."submit".'"'." name=".'"'."client".'"'.">Understood</button></form>								
-							</th>
-							<th ";
-							if($row1['ADMINK']==='false' || $row['SITUATIE']!=='pending')echo "hidden";
-							echo ">
-								<form action=".'"'."acceptFormular.php".'"'." method=".'"'."POST".'"'.">
-								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
-								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">Accept</button></form>								
-							</th>
-							<th ";
-							if($row1['ADMINK']==='false' || $row['SITUATIE']!=='pending')echo "hidden";
-							echo ">
-								<form action=".'"'."rejectFormular.php".'"'." method=".'"'."POST".'"'.">
-								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
-								<button type=".'"'."submit".'"'." name=".'"'."reject".'"'.">Reject</button></form>								
-							</th>
-						</tr>
-
-					</table>";
-	
+   
+        <form method="POST" class="continut" action="acceptRequest.php">
+	<?php	echo "<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$_POST['request-id'].'"'." hidden>"; 
 	?>
-		
+            <div class="imgcontainer">
+               
 
-</div>
+            </div>
+
+            <div class="container">
+
+               
+                <br />
+				 <br />
+               
+                
+                <label for="detalii"><b>Details</b></label>
+                <br />
+
+                <textarea rows="4" cols="50" name="reason" class="detalii" placeholder="Enter Details" id="detalii">
+                </textarea>
+
+				<br /> <br />
+               
+                <button type="submit">Submit</button>
+
+
+            </div>
+
+
+
+        </form>
+					
 				</div>
 			</div>
 			<div class="sidebar">
@@ -275,5 +207,7 @@ $row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 			</div>
 		</div>
 	</body>
-				
+	<?php 
+					
+						?>
 	</html>

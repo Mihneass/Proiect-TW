@@ -112,8 +112,7 @@
                 <label for="detalii"><b>Details</b></label>
                 <br />
 
-                <textarea rows="4" cols="50" class="detalii" name="details" placeholder="Enter Details" id="detalii">
-                </textarea>
+                <textarea rows="4" cols="50" class="detalii" name="details" placeholder="Enter Details" id="detalii"></textarea>
 
 
                 <input type="file" name="myfile" name="object-file">

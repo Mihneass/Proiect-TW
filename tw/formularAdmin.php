@@ -88,20 +88,26 @@
                 <br />
 
 				<br />
-				<label for="oname"><b>Object Name</b></label>
-				<input type="text" placeholder="Enter Object Name" id="object" required>
+				<select name="object-name" id="schedule">
+								<option value="revizii">Revizii</option>
+								<option value="cadru">Cadru</option>	
+								<option value="fands">Furca Si Shock</option>
+								<option value="roti">Roti</option>	
+								<option value="frane">Frane</option>
+								<option value="transmisie">Transmisie</option>	
+								<option value="diverse">Diverse</option>	
+							</select>
 				<br />
 
 				<br />
 				<label for="onr"><b>Object Nr.</b></label>
-                <input type="number" placeholder="Enter Number" id="price" required>
+                <input type="number" placeholder="Enter Number" id="price" name="object-number" required>
 
                 <br />
                 <label for="detalii"><b>Details</b></label>
                 <br />
 
-                <textarea rows="4" cols="50" class="detalii" placeholder="Enter Details" id="detalii">
-                </textarea>
+                <textarea rows="4" cols="50" class="detalii" name="details" placeholder="Enter Details" id="detalii"></textarea>
 
 
                

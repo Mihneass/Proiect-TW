@@ -6,6 +6,9 @@ $conn = oci_connect("student", "student", "localhost:1521/xe");
                    echo $m['message'], "\n";
                    exit;
                       }
+                      $enquiry="UPDATE cereri SET DETALII="."'".$_POST['reason']."'"." where IDK=".$_POST['request-id'];
+                      $stid = oci_parse($conn, $enquiry);
+                      oci_execute($stid);	
                 $enquiry="UPDATE cereri SET SITUATIE="."'"."accepted"."'"." where IDK=".$_POST['request-id'];
                 $stid = oci_parse($conn, $enquiry);
                 oci_execute($stid);	
