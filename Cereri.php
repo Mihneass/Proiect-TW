@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Main</title>
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/stilizare-butoane.css" />
-    <link rel="stylesheet" href="styles/stilizare-cerere.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/stilizare-butoane.css" />
+    <link rel="stylesheet" href="css/stilizare-cerere.css" />
 
 </head>
 <body>
     <div class="header">
-        <a href="Cereri.php"><img alt="Logo" src="biciclete.png" class="bicla" /></a>
+        <a href="Cereri.php"><img alt="Logo" src="images/logo.png" class="bicla" /></a>
 
         <div class="meniu">
             <a href="Calendar.php"><p class="calendar">Calendar</p></a>
