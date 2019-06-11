@@ -77,9 +77,9 @@
 				<h1 class="avatar">Formular</h1>
 
    
-        <form class="continut" action="booking.php">
+        <form class="continut" action="make-request.php" method="POST">
             <div class="imgcontainer">
-               
+
 
             </div>
 
@@ -97,28 +97,31 @@
 								<option value="transmisie">Transmisie</option>	
 								<option value="diverse">Diverse</option>	
 							</select>
-							<?php echo $_POST['service-type']; ?>
+							<?php //echo $_POST['service-type'];
+							 echo "<input type=".'"'."hidden".'"'." name=".'"'."service-date".'"'." value=".'"'.$_POST['service-date'].'"'." hidden>";
+						//	 echo "<input type=".'"'."hidden".'"'." name=".'"'."service-type".'"'." value=".'"'.$_POST['service-type'].'"'." hidden>";
+							?>
 				<br />
 				<br />
 				 <br />
 				
-                <input type="text" placeholder="Enter Object Name" id="object" required>
-                <input type="number" placeholder="Enter Number" id="price" required>
+                <input type="text" placeholder="Enter Object Name" id="object" name="object-name" required>
+                <input type="number" placeholder="Enter Number" id="price" name="object-number" required>
 
                 <br />
                 <label for="detalii"><b>Details</b></label>
                 <br />
 
-                <textarea rows="4" cols="50" class="detalii" placeholder="Enter Details" id="detalii">
+                <textarea rows="4" cols="50" class="detalii" name="details" placeholder="Enter Details" id="detalii">
                 </textarea>
 
 
-                <input type="file" name="myfile"  >
+                <input type="file" name="myfile" name="object-file">
 
                 <br />
                 <label for="address"><b>Address</b></label>
                 <br />
-                <input type="text" placeholder="Enter Address" id="address" required>
+                <input type="text" placeholder="Enter Address" name="address" id="address" required>
 
 
                 <button type="submit">Submit</button>

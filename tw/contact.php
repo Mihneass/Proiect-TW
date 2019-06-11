@@ -85,8 +85,8 @@
    let body = document.getElementById('contact');
 
    var current="<?php echo $_COOKIE['userID'] ?>";
-
-   fetch('jsons/requests.json')
+   console.log(current);
+   fetch('jsons/requests.json?vr=1.3')
    .then(response => {
        if (!response.ok) {
            throw new Error("HTTP error " + response.status);
@@ -124,7 +124,7 @@ let i=0;
    str2=str2.concat(this.users[i].situation);
    txt5.innerText=str2;
    a.appendChild(txt5);
-pg.appendChild(p);
+   pg.appendChild(p);
    body.appendChild(pg);}
    i++;
    }

@@ -16,6 +16,13 @@ $thisUser=array();
     $fileContent = file_get_contents('./jsons/requests.json');
     $thisUser=json_encode($thisUser);
     file_put_contents('./jsons/requests.json',$thisUser);
+    $conn = oci_connect("student", "student", "localhost:1521/xe");
+if (!$conn) {
+  $m = oci_error();
+   echo $m['message'], "\n";
+   exit;
+      }
+      $i=0;
                 $enquiry="SELECT * FROM cereri";
                 $stid = oci_parse($conn, $enquiry);
                 oci_execute($stid);	
@@ -32,8 +39,11 @@ $thisUser=array();
                             $information = json_decode($fileContent); 
                           array_push($information,$thisReq);
                             $formatedInfo=json_encode($information);
+                          //  echo "kill me".$row['IDK']."<br>";
+                           // $i++;
                             file_put_contents('./jsons/requests.json',$formatedInfo);
                           }
-header('Location: contact.php');
+                  //        echo "<br><br>".$i;
+//header('Location: contact.php');
 
 ?>

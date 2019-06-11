@@ -75,8 +75,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     ';
     }
 	$week .=  $day . '<form action="formularClient.php" method="POST">';
-	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-type".'"'." value=".'"'.$_GET['page'].'"'." hidden>";
-	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-date".'"'." value=".'"'.$today.'"'." hidden>";
+//	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-type".'"'." value=".'"'.$_GET['page'].'"'." hidden>";
+	$week .=	"<input type=".'"'."hidden".'"'." name=".'"'."service-date".'"'." value=".'"'.$date.'"'." hidden>";
 	$week .=	'<button type="submit">Make an appointment</button></form>
 </td>';
 
@@ -106,10 +106,10 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
         
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/calendar.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/calendarr.css">
+	<link rel="stylesheet" href="css/header.css">
 	<style>
-	
+		
 	</style>
 </head>
 <body>

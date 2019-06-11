@@ -32,7 +32,7 @@ if(!isset($_COOKIE['is_logged'])){
 			}
 			?>
 			<form action="index.php">
-					<a href="cos.php"><img  src="images/cos.jpg" alt="" name="cos" id="cos"></a>
+					
 			</form>
 		</div>
 		<div class="navigation">
