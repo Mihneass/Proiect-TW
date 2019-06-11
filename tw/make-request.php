@@ -22,7 +22,7 @@ $dateToSend=date("d-m-Y",strtotime($_POST['service-date']));
 oci_bind_by_name($stid,':date1',$dateToSend);
 oci_bind_by_name($stid,':date2',$dateToSend);
 oci_execute($stid);
-setcookie('id_cerere',$_COOKIE['id_cerere'],time()+time()+(86400*100));
+setcookie('id_cerere',$_COOKIE['id_cerere']+1,time()+time()+(86400*100));
 $thisUser=array();
                 $fileContent = file_get_contents('./jsons/requests.json');
                 $thisUser=json_encode($thisUser);

@@ -1,6 +1,6 @@
 <!DOCTYPE php>
 
-<php>
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>Service - reparatii biciclete</title>
@@ -170,6 +170,38 @@
 								</p>
 							</div>
 						</li>
+						
+						<?php
+						if(isset($_COOKIE['userAdmin']))
+						if($_COOKIE['userAdmin']==='true')
+						echo'<li>
+						<div>
+							<form action="save-csv.php" method="POST">
+							<button type="submit">Do csv</button>
+							</form>
+
+						
+						</div>
+						</li>
+						<li>
+						<div>
+						<form action="read-csv.php" method="POST">
+							<button type="submit">Get csv</button>
+							</form>
+
+						
+						</div>
+						</li>
+						<li>
+						<div>
+						<form action="make-pdf.php" method="POST">
+							<button type="submit">Make pdf</button>
+							</form>
+
+						
+						</div>
+						</li>';
+?>
 
 					</ul>
 				</div>
@@ -293,4 +325,4 @@
 		</div>
 	</div>
 </body>
-</php>
+</html>

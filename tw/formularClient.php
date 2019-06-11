@@ -12,6 +12,7 @@
 	<div id="header">
 		<div>
 		<?php
+		    if($_COOKIE['userAdmin']==='true')header('Location: index.php');
 			if($_COOKIE['is_logged']==="LOGGED"){
 				echo "<form action=".'"'."logout_process.php".'"'." method=".'"'."POST".'"'." >";	
 				echo "<button type=".'"'."submit".'"'."name=".'"'."logbutton".'"'.">LOGOUT</button>";
@@ -88,7 +89,7 @@
                
                 <br />
 				 <br />
-				 <select name="schedule" id="schedule">
+				 <select name="object-name" id="schedule">
 								<option value="revizii">Revizii</option>
 								<option value="cadru">Cadru</option>	
 								<option value="fands">Furca Si Shock</option>
@@ -105,7 +106,6 @@
 				<br />
 				 <br />
 				
-                <input type="text" placeholder="Enter Object Name" id="object" name="object-name" required>
                 <input type="number" placeholder="Enter Number" id="price" name="object-number" required>
 
                 <br />
