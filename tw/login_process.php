@@ -23,10 +23,12 @@ $rc_row = oci_fetch_array($rc, OCI_ASSOC+OCI_RETURN_NULLS);
 echo $rpassword;
 if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/");
             echo $enquiry;
+            oci_close ($conn);
       //      header('Location: index.php');
             }
         else if($rpassword!=$_POST['pass']){
             setcookie("is_logged","PASS_NOT_FOUND",time()+(86400*10),"/");
+            oci_close ($conn);
             header('Location: index.php');
         }
             else {setcookie("is_logged","LOGGED",time()+(86400*10),"/");
@@ -70,7 +72,7 @@ if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/
                           array_push($information,$thisReq);
                             $formatedInfo=json_encode($information);
                             file_put_contents('./jsons/requests.json',$formatedInfo);
-                
+                            oci_close ($conn);
                             header('Location:index.php');
                           }
                 }

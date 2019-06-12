@@ -160,6 +160,8 @@ $row1 = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
 							echo ">
 								<form action=".'"'."acceptFormular.php".'"'." method=".'"'."POST".'"'.">
 								<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$row['IDK'].'"'." hidden>
+								<input type=".'"'."hidden".'"'." name=".'"'."request-type".'"'." value=".'"'.$row['NUME_OBIECT'].'"'." hidden>
+								<input type=".'"'."hidden".'"'." name=".'"'."request-nr".'"'." value=".'"'.$row['NR_OBIECTE'].'"'." hidden>
 								<button type=".'"'."submit".'"'." name=".'"'."accept".'"'.">Accept</button></form>								
 							</th>
 							<th ";

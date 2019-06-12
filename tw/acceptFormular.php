@@ -79,7 +79,9 @@
    
         <form method="POST" class="continut" action="acceptRequest.php">
 	<?php	echo "<input type=".'"'."hidden".'"'." name=".'"'."request-id".'"'." value=".'"'.$_POST['request-id'].'"'." hidden>"; 
-	?>
+			echo "<input type=".'"'."hidden".'"'." name=".'"'."request-type".'"'." value=".'"'.$_POST['request-type'].'"'." hidden>"; 
+echo "<input type=".'"'."hidden".'"'." name=".'"'."request-nr".'"'." value=".'"'.$_POST['request-nr'].'"'." hidden>";
+?>
             <div class="imgcontainer">
                
 
