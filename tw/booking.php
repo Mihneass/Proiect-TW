@@ -172,7 +172,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 				<li class="booking">
 					<a href="booking.php">calendar</a>
 				</li>
-				
+				<li class="booking">
+					<a href="serv/stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>

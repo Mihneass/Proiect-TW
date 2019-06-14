@@ -75,6 +75,9 @@ if(!isset($_COOKIE['is_logged'])){
 				<li class="booking">
 					<a href="booking.php">Calendar</a>
 				</li>
+				<li class="booking">
+					<a href="serv/stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -155,11 +158,26 @@ if(!isset($_COOKIE['is_logged'])){
 									<input type="text" name="address" id="address" required>
 								</label>
 
-								<label for="gen"> <span>gender </span>
+<table class="table">
+							<tr >
+							
+								<th><label for="gen"> <span>gender </span>
 									<select name="schedule" id="schedule">
 										<option value="baiat">male</option>
 										<option value="fata">female</option>	
-									</select>
+									</select></th>
+									
+								<td><label for="ip"> <span>Admin/Normal </span>
+									<select name="schedule2" id="schedule2">
+										<option value="normal">Normal</option>
+										<option value="admin">Admin</option>	
+									</select></td>
+								
+							</tr>
+							</table>		
+
+									
+					
 								</label>
 								<label for="phone"> <span>phone number</span>
 									<input type="tel" pattern="[0-9]7[0-9]{8}" name="phone" id="phone" required>

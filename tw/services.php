@@ -62,6 +62,9 @@
 				<li class="booking">
 					<a href="booking.php">Calendar</a>
 				</li>
+				<li class="booking">
+					<a href="serv/stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -81,12 +84,11 @@
 					</ul>
 				</div>
 				<div class="services">
-				<h1><?php if($_COOKIE['is_logged']==="LOGGED")echo "Welcome, ".$_COOKIE['user'];  
-				?></h1>
+				<h1><?php if($_COOKIE['is_logged']==="LOGGED")echo "Welcome, ".$_COOKIE['user'];  ?></h1>
 				<h2>servicii</h2>
 					<ul>
 						<li>
-							<a href="booking.php?page=revizii" class="figure"><img src="images/drinking.jpg" alt=""></a>
+							<a href="serv/revizii.php?page=revizii" class="figure"><img src="images/drinking.jpg" alt=""></a>
 							<div>
 								<h3>Revizii</h3>
 								<p>
@@ -100,7 +102,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="booking.php?page=cadru" class="figure"><img src="images/navigator.jpg" alt=""></a>
+							<a href="serv/cadru.php?page=cadru" class="figure"><img src="images/navigator.jpg" alt=""></a>
 							<div>
 								<h3>Cadru</h3>
 								<p>
@@ -112,7 +114,7 @@
 							</div>
 						</li>
 						<li>
-							<a href="booking.php?page=furca" class="figure"><img src="images/tool-box.jpg" alt=""></a>
+							<a href="serv/furca.php?page=furca" class="figure"><img src="images/tool-box.jpg" alt=""></a>
 							<div>
 								<h3>Furca si shock</h3>
 								<p>
@@ -127,7 +129,7 @@
 						</li>
 
 						<li>
-							<a href="booking.php?page=roti" class="figure"><img src="images/roti.jpg" alt=""></a>
+							<a href="serv/roti.php?page=roti" class="figure"><img src="images/roti.jpg" alt=""></a>
 							<div>
 								<h3>Roti</h3>
 								<p>									
@@ -139,7 +141,7 @@
 						</li>
 
 						<li>
-							<a href="booking.php?page=frane" class="figure"><img src="images/frane.jpg" alt=""></a>
+							<a href="serv/frane.php?page=frane" class="figure"><img src="images/frane.jpg" alt=""></a>
 							<div>
 								<h3>Frane</h3>
 								<p>									
@@ -150,7 +152,7 @@
 						</li>
 
 						<li>
-					     	<a href="booking.php?page=transmisie" class="figure"><img src="images/transmisie.jpg" alt=""></a>
+					     	<a href="serv/transmisie.php?page=transmisie" class="figure"><img src="images/transmisie.jpg" alt=""></a>
 							<div>
 								<h3>Transmisie</h3>
 								<p>									
@@ -162,7 +164,7 @@
 						</li>
 
 						<li>
-							<a href="booking.php?page=diverse" class="figure"><img src="images/diverse.jpg" alt=""></a>
+							<a href="serv/alte.php?page=diverse" class="figure"><img src="images/diverse.jpg" alt=""></a>
 							<div>
 								<h3>Diverse</h3>
 								<p>									
@@ -212,25 +214,25 @@
 				<h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="booking.php">revizii</a>
+							<a href="serv/revizii.php">revizii</a>
 						</li>
 						<li>
-							<a href="booking.html">cadru</a>
+							<a href="serv/cadru.php">cadru</a>
 						</li>
 						<li>
-							<a href="booking.html">furca si shock</a>
+							<a href="serv/furca.php">furca si shock</a>
 						</li>
 						<li>
-							<a href="booking.html">roti</a>
+							<a href="serv/roti.php">roti</a>
 						</li>
 						<li>
-							<a href="booking.html">frane</a>
+							<a href="serv/frane.php">frane</a>
 						</li>
 						<li>
-							<a href="booking.html">transmisie</a>
+							<a href="serv/transmisie.php">transmisie</a>
 						</li>
 						<li>
-							<a href="booking.html">diverse</a>
+							<a href="serv/alte.php">diverse</a>
 						</li>	
 					</ul>
 				</div>

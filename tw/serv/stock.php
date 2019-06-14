@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>revizii</title>
+	<title>stock</title>
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
 	
 	<style>
@@ -23,7 +23,7 @@
 			?>
 			<a href="../index.php" class="logo"><img src="../images/logo.png" alt=""></a>
 			<form action="../index.php">
-					
+				
 			</form>
 		</div>
 		<div class="navigation">
@@ -55,13 +55,13 @@
 							<a href="transmisie.php">Transmisie</a>
 						</li>
 						<li>
-							<a href="alte.php">altele</a>
+							<a href="alte.php">Altele</a>
 						</li>
 						
 					</ul>
 				</li>
 				<li>
-					<a href="../contact.php">cereri</a>
+					<a href="../contact.php">comenzi</a>
 				</li>
 				<li class="booking">
 					<a href="../booking.php">calendar</a>
@@ -85,46 +85,74 @@
 							<a href="../services.php">srvices</a>
 						</li>
 						<li>
-								<a href="revizii.php">revizii</a>
+								<a href="stock.php">stock</a>
 							</li>
 						
 					</ul>
 				</div>
 				<div class="services">
-					<h2>revizii</h2>
+					<h2>Stocul disponibil</h2>
+					<form action="stock.php" method="POST">
 					<table class="table">
 							<tr >
-								<th><h1>Servicii</h1></th>
-								<td><h1>Pret</h1></td>
+								<th><h1>Nume</h1></th>
+								<td><h1>Numar</h1></td>
+								<th><h1>Add/Remove</h1></th>
 							</tr>"
 							<tr >
-								<th><h2>Revizie mica</h2></th>
-								<td><h2>30</h2></td>
-							</tr>"
-							<tr >	
-								<th><h2>Revizie standard</h2></th> 
-								<td><h2>75</h2></td> 
+								<th><h2>Revizii</h2></th>
+								<td><h2>5</h2></td>
+								<th>
+
+								<button type="submit" name="add1">+</button>
+								<button type="submit" name="remv1">-</button>
+								
+								</th>
 							</tr>"
 							<tr >
-								<th><h2>Revizie mare</h2></th>
-								<td><h2>250</h2></td>
+								<th><h2>Cadru</h2></th>
+								<td><h2>5</h2></td>
+								<th>
+								<button type="submit" name="add2">+</button>
+								<button type="submit" name="remv2">-</button>
+								</th>
+							</tr>"
+							<tr >
+								<th><h2>Furca si shock</h2></th>
+								<td><h2>5</h2></td>
+								<th><button type="submit" name="add3">+</button>
+								<button type="submit" name="remv3">-</button></th>
+							</tr>"
+							<tr >
+								<th><h2>Roti</h2></th>
+								<td><h2>5</h2></td>
+								<th><button type="submit" name="add4">+</button>
+								<button type="submit" name="remv4">-</button></th>
+							</tr>"
+							<tr >
+								<th><h2>Frane</h2></th>
+								<td><h2>5</h2></td>
+								<th><button type="submit" name="add5">+</button>
+								<button type="submit" name="remv5">-</button></th>
+							</tr>"
+							<tr >
+								<th><h2>Transmisie</h2></th>
+								<td><h2>5</h2></td>
+								<th><button type="submit" name="add6">+</button>
+								<button type="submit" name="remv6">-</button></th>
+							</tr>"
+							<tr >
+								<th><h2>Altele</h2></th>
+								<td><h2>5</h2></td>
+								<th><button type="submit" name="add7">+</button>
+								<button type="submit" name="remv7">-</button></th>
 							</tr>"
 							
+				
 					</table>
-		</br>
-					<p><h4>Revizia mica include:</h4> verificarea suruburilor; verificarea si reglarea franelor; verificarea,
-						 ungerea si reglarea schimbatoarelor; verificarea si ungerea lantului si o inspectie vizuala a bicicletei.</p>
-			
-						 <p><h4>Revizia standard include:</h4> verificarea suruburilor; verificarea si reglarea franelor; verificarea,
-						  ungerea si reglarea schimbatoarelor; ungerea manetelor schimbatoarelor (daca se poate); verificarea si 
-						 ungerea lantului; reglajul butucilor; centratul rotilor; reglajul cuvetelor si o inspectie vizuala a bicicletei.
-						
-						 <p><h4>Revizia mare include:</h4> verificarea suruburilor; verificarea, reglarea si aerisirea franelor hidraulice 
-						 (daca pe bicicleta sunt astfel de frane); verificarea, ungerea si reglarea schimbatoarelor; ungerea manetelor 
-						 schimbatoarelor (daca se poate); verificarea, curatarea si ungerea transmisiei (lantul, pinioanele si angrenajul); schimbarea vaselinei din butuci si reglajul lor (daca sunt pe baza de bile); centratul rotilor;
-						  schimbarea vaselinei din cuvete (daca este pe baza de coroane) si reglajul acestora si o inspectie vizuala a bicicletei.
-						
-						</div>
+					</form>
+					
+				</div>
 			</div>
 			<div class="sidebar">
 				<div class="navigation">

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>drama</title>
+	<title>cadru</title>
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
 	
 	<style>
@@ -23,8 +23,7 @@
 			?>
 			<a href="../index.php" class="logo"><img src="../images/logo.png" alt=""></a>
 			<form action="../index.php">
-				<a href="../cos.php"><img  src="../images/cos.jpg" alt="" name="cos" id="cos"></a>
-				
+					
 			</form>
 		</div>
 		<div class="navigation">
@@ -35,7 +34,7 @@
 				
 				</li>
 				<li class="selected">
-                <a href="services.php">services</a>
+                <a href="../services.php">services</a>
 					<ul>
 						<li>
 							<a href="revizii.php">Revizii</a>
@@ -67,6 +66,9 @@
 				<li class="booking">
 					<a href="../booking.php">calendar</a>
 				</li>
+				<li class="booking">
+					<a href="stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -89,7 +91,7 @@
 					</ul>
 				</div>
 				<div class="services">
-					
+				<h2>cadru</h2>
 					<table class="table">
 							<tr >
 								<th><h1>Servicii</h1></th>
@@ -159,25 +161,25 @@
                 <h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="revizii.html">revizii</a>
+							<a href="revizii.php">revizii</a>
 						</li>
 						<li>
-							<a href="cadru.html">cadru</a>
+							<a href="cadru.php">cadru</a>
 						</li>
 						<li>
-							<a href="furca.html">furca si shock</a>
+							<a href="furca.php">furca si shock</a>
 						</li>
 						<li>
-							<a href="roti.html">roti</a>
+							<a href="roti.php">roti</a>
 						</li>
 						<li>
-							<a href="frane.html">frane</a>
+							<a href="frane.php">frane</a>
 						</li>
 						<li>
-							<a href="transmisie.html">transmisie</a>
+							<a href="transmisie.php">transmisie</a>
 						</li>
 						<li>
-							<a href="alte.html">diverse</a>
+							<a href="alte.php">diverse</a>
 						</li>	
 					</ul>
 				</div>

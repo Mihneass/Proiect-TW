@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>drama</title>
+	<title>roti</title>
 	<link rel="stylesheet" href="../css/style.css" type="text/css">
 	
 	<style>
@@ -23,8 +23,7 @@
 			?>
 			<a href="../index.php" class="logo"><img src="../images/logo.png" alt=""></a>
 			<form action="../index.php">
-				<a href="../cos.php"><img  src="../images/cos.jpg" alt="" name="cos" id="cos"></a>
-				
+			<h2>roti</h2>	
 			</form>
 		</div>
 		<div class="navigation">
@@ -35,7 +34,7 @@
 				
 				</li>
 				<li class="selected">
-                <a href="services.php">services</a>
+                <a href="../services.php">services</a>
 					<ul>
 						<li>
 							<a href="revizii.php">Revizii</a>
@@ -67,6 +66,9 @@
 				<li class="booking">
 					<a href="../booking.php">calendar</a>
 				</li>
+				<li class="booking">
+					<a href="stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -89,8 +91,65 @@
 					</ul>
 				</div>
 				<div class="services">
-					<h2>ale iese</h2>
-		
+					<h2>roti</h2>
+					<table class="table">
+							<tr >
+								<th><h1>Servicii</h1></th>
+								<td><h1>Pret</h1></td>
+							</tr>"
+							<tr >
+								<th><h2>Umflat roti</h2></th>
+								<td><h2>5</h2></td>
+							</tr>"
+							<tr >	
+								<th><h2>Demontat/ montat camera sau cauciuc</h2></th> 
+								<td><h2>15</h2></td> 
+							</tr>"
+							<tr >
+								<th><h2>Montat baieu</h2></th>
+								<td><h2>50</h2></td>
+							</tr>"
+							<tr >
+								<th><h2>Centrat roata</h2></th>
+								<td><h2>30</h2></td>
+							</tr>"
+							<tr >
+								<th><h2>Aliniere janta - butuc</h2></th>
+								<td><h2>10</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Spitat roata</h2></th> 
+								<td><h2>15</h2></td> 
+								
+							</tr>"
+							<tr >
+								<th><h2>Inlocuit spite/ janta/ butuc/ respitat</h2></th>
+								<td><h2>30</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Service butuc</h2></th>
+								<td><h2>10</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Schimbat rulmenti butuc/ caseta</h2></th>
+								<td><h2>20</h2></td>
+								
+							</tr>"
+							<tr >
+								<th><h2>Indreptat janta </h2></th> 
+								<td><h2>40</h2></td> 
+							</tr>"
+							<tr >
+								
+								
+								
+								
+								
+					
+					</table>
 				</div>
 			</div>
 			<div class="sidebar">
@@ -98,25 +157,25 @@
                 <h3>Servicii</h3>
 					<ul>
 						<li class="selected">
-							<a href="revizii.html">revizii</a>
+							<a href="revizii.php">revizii</a>
 						</li>
 						<li>
-							<a href="cadru.html">cadru</a>
+							<a href="cadru.php">cadru</a>
 						</li>
 						<li>
-							<a href="furca.html">furca si shock</a>
+							<a href="furca.php">furca si shock</a>
 						</li>
 						<li>
-							<a href="roti.html">roti</a>
+							<a href="roti.php">roti</a>
 						</li>
 						<li>
-							<a href="frane.html">frane</a>
+							<a href="frane.php">frane</a>
 						</li>
 						<li>
-							<a href="transmisie.html">transmisie</a>
+							<a href="transmisie.php">transmisie</a>
 						</li>
 						<li>
-							<a href="alte.html">diverse</a>
+							<a href="alte.php">diverse</a>
 						</li>	
 					</ul>
 				</div>
