@@ -8,8 +8,12 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/stilizare-butoane.css" />
-    <link rel="stylesheet" href="css/stilizare-cerere.css" />
+    <link rel="stylesheet" href="css/pentru-cerere.css" />
 	
+<style>
+
+</style>
+
 </head>
 <body>
 	<div id="header">
@@ -129,6 +133,13 @@ echo "
 				<p>".$row['DETALII']."</p>
 				
 			</a>
+
+			";
+			
+			if(file_exists("saved_images/request_file.".$_GET['page'].".jpg"))
+			echo "
+			<img src=saved_images/request_file.".$_GET['page'].".jpg>";
+			echo "
 			</div>
 		</div>";
 

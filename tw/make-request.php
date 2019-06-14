@@ -22,6 +22,16 @@ $dateToSend=date("d-m-Y",strtotime($_POST['service-date']));
 oci_bind_by_name($stid,':date1',$dateToSend);
 oci_bind_by_name($stid,':date2',$dateToSend);
 oci_execute($stid);
+
+if(empty($_FILES['myfile']['tmp_name']))
+{
+  echo "File not found";
+  exit;
+}
+if(move_uploaded_file($_FILES['myfile']['tmp_name'],"saved_images/".$_FILES['myfile']['name']))
+echo "yes";
+rename("saved_images/".$_FILES['myfile']['name'],"saved_images/request_file.".$_COOKIE['id_cerere'].".jpg");
+
 setcookie('id_cerere',$_COOKIE['id_cerere']+1,time()+time()+(86400*100));
 $thisUser=array();
                 $fileContent = file_get_contents('./jsons/requests.json');

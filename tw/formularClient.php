@@ -78,7 +78,7 @@
 				<h1 class="avatar">Formular</h1>
 
    
-        <form class="continut" action="make-request.php" method="POST">
+        <form class="continut" action="make-request.php" method="POST" encType="multipart/form-data">
             <div class="imgcontainer">
 
 
@@ -90,13 +90,13 @@
                 <br />
 				 <br />
 				 <select name="object-name" id="schedule">
-								<option value="revizii">Revizii</option>
-								<option value="cadru">Cadru</option>	
-								<option value="fands">Furca Si Shock</option>
-								<option value="roti">Roti</option>	
-								<option value="frane">Frane</option>
-								<option value="transmisie">Transmisie</option>	
-								<option value="diverse">Diverse</option>	
+								<option value="Servicii">Revizii</option>
+								<option value="Cadru">Cadru</option>	
+								<option value="Furca">Furca Si Shock</option>
+								<option value="Roti">Roti</option>	
+								<option value="Frane">Frane</option>
+								<option value="Rransmisie">Transmisie</option>	
+								<option value="Diverse">Diverse</option>	
 							</select>
 							<?php //echo $_POST['service-type'];
 							 echo "<input type=".'"'."hidden".'"'." name=".'"'."service-date".'"'." value=".'"'.$_POST['service-date'].'"'." hidden>";
