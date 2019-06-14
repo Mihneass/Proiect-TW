@@ -26,7 +26,7 @@ if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/
             oci_close ($conn);
       //      header('Location: index.php');
             }
-        else if($rpassword!=$_POST['pass']){
+        else if($rpassword!=md5($_POST['pass'])){
             setcookie("is_logged","PASS_NOT_FOUND",time()+(86400*10),"/");
             oci_close ($conn);
             header('Location: index.php');

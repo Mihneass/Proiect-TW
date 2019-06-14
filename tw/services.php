@@ -81,7 +81,8 @@
 					</ul>
 				</div>
 				<div class="services">
-				<h1><?php if($_COOKIE['is_logged']==="LOGGED")echo "Welcome, ".$_COOKIE['user'];  ?></h1>
+				<h1><?php if($_COOKIE['is_logged']==="LOGGED")echo "Welcome, ".$_COOKIE['user'];  
+				?></h1>
 				<h2>servicii</h2>
 					<ul>
 						<li>
