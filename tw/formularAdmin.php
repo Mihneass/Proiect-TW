@@ -65,6 +65,9 @@
 				<li class="booking">
 					<a href="booking.php">Calendar</a>
 				</li>
+				<li class="booking">
+					<a href="serv/stock.php">Stock</a>
+				</li>
 			</ul>
 		</div>
 	</div>

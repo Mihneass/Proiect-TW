@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/stilizare-butoane.css" />
-    <link rel="stylesheet" href="css/pentru-cerere.css" />
+    <link rel="stylesheet" href="css/stilizare-cerere.css" />
 	
 <style>
 
@@ -71,6 +71,9 @@
 				</li>
 				<li class="booking">
 					<a href="booking.php">Calendar</a>
+				</li>
+				<li class="booking">
+					<a href="serv/stock.php">Stock</a>
 				</li>
 			</ul>
 		</div>
