@@ -16,10 +16,12 @@
 		<div>
 		<?php
 			if($_COOKIE['is_logged']==="LOGGED"){
-				echo "<form action=".'"'."logout_process.php".'"'." method=".'"'."POST".'"'." >";	
+				if($_COOKIE['userAdmin']!=="true")header('Location: ../index.php');
+				echo "<form action=".'"'."../logout_process.php".'"'." method=".'"'."POST".'"'." >";	
 				echo "<button type=".'"'."submit".'"'."name=".'"'."logbutton".'"'.">LOGOUT</button>";
 				echo "</form>";
 			}
+			else header('Location: ../index.php');
 			?>
 			<a href="../index.php" class="logo"><img src="../images/logo.png" alt=""></a>
 			<form action="../index.php">
@@ -92,7 +94,7 @@
 				</div>
 				<div class="services">
 					<h2>Stocul disponibil</h2>
-					<form action="stock.php" method="POST">
+					
 					<table class="table">
 							<tr >
 								<th><h1>Nume</h1></th>
@@ -100,57 +102,166 @@
 								<th><h1>Add/Remove</h1></th>
 							</tr>"
 							<tr >
-								<th><h2>Revizii</h2></th>
-								<td><h2>5</h2></td>
-								<th>
-
-								<button type="submit" name="add1">+</button>
-								<button type="submit" name="remv1">-</button>
+							<?php
+							if(!isset($_COOKIE['id_cerere']))setcookie('id_cerere',61,time()+time()+(86400*100));
+							$conn = oci_connect("student", "student", "localhost:1521/xe");
+							if (!$conn) {
+							   $m = oci_error();
+							   echo $m['message'], "\n";
+							   exit;
+							}
+							?>
+								<th><h2>Servicii</h2></th>
+								<td><h2>
 								
+								<?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Servicii";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?>
+								
+								</h2></td>
+								<th>
+								<form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Servicii">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Servicii">
+								<button type="submit" name="remv1">-</button>
+								</form>
 								</th>
 							</tr>"
 							<tr >
 								<th><h2>Cadru</h2></th>
-								<td><h2>5</h2></td>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Cadru";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
 								<th>
-								<button type="submit" name="add2">+</button>
-								<button type="submit" name="remv2">-</button>
+								<form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Cadru">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Cadru">
+								<button type="submit" name="remv1">-</button>
+								</form>
 								</th>
 							</tr>"
 							<tr >
 								<th><h2>Furca si shock</h2></th>
-								<td><h2>5</h2></td>
-								<th><button type="submit" name="add3">+</button>
-								<button type="submit" name="remv3">-</button></th>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Furca";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
+								<th><form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Furca">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Furca">
+								<button type="submit" name="remv1">-</button>
+								</form></th>
 							</tr>"
 							<tr >
 								<th><h2>Roti</h2></th>
-								<td><h2>5</h2></td>
-								<th><button type="submit" name="add4">+</button>
-								<button type="submit" name="remv4">-</button></th>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Roti";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
+								<th><form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Roti">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Roti">
+								<button type="submit" name="remv1">-</button>
+								</form></th>
 							</tr>"
 							<tr >
 								<th><h2>Frane</h2></th>
-								<td><h2>5</h2></td>
-								<th><button type="submit" name="add5">+</button>
-								<button type="submit" name="remv5">-</button></th>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Frane";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
+								<th><form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Frane">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Frane">
+								<button type="submit" name="remv1">-</button>
+								</form></th>
 							</tr>"
 							<tr >
 								<th><h2>Transmisie</h2></th>
-								<td><h2>5</h2></td>
-								<th><button type="submit" name="add6">+</button>
-								<button type="submit" name="remv6">-</button></th>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Transmisie";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
+								<th><form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Transmisie">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Transmisie">
+								<button type="submit" name="remv1">-</button>
+								</form></th>
 							</tr>"
 							<tr >
 								<th><h2>Altele</h2></th>
-								<td><h2>5</h2></td>
-								<th><button type="submit" name="add7">+</button>
-								<button type="submit" name="remv7">-</button></th>
+								<td><h2><?php
+								$enquiry="SELECT NR_PIESE FROM PIESE WHERE NUME=:Servicii";
+								$stid = oci_parse($conn, $enquiry);
+								$piece="Diverse";
+								oci_bind_by_name($stid,':Servicii',$piece);
+								oci_execute($stid);
+								$row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+								echo $row['NR_PIESE'];
+															?></h2></td>
+								<th><form action="add_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Diverse">
+								<button type="submit" name="add1">+</button>
+								</form>
+								<form action="delete_piece.php" method="POST">
+								<input type="hidden" name="toModify" value="Diverse">
+								<button type="submit" name="remv1">-</button>
+								</form></th>
 							</tr>"
 							
 				
 					</table>
-					</form>
+					
 					
 				</div>
 			</div>

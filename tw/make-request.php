@@ -1,4 +1,11 @@
 <?php
+
+
+if(empty($_FILES['myfile']['tmp_name']))
+{
+  echo "File not found";
+  exit;
+}
 if(!isset($_COOKIE['id_cerere']))setcookie('id_cerere',61,time()+time()+(86400*100));
 $conn = oci_connect("student", "student", "localhost:1521/xe");
 if (!$conn) {
@@ -23,11 +30,8 @@ oci_bind_by_name($stid,':date1',$dateToSend);
 oci_bind_by_name($stid,':date2',$dateToSend);
 oci_execute($stid);
 
-if(empty($_FILES['myfile']['tmp_name']))
-{
-  echo "File not found";
-  exit;
-}
+
+var_dump($_FILES);
 if(move_uploaded_file($_FILES['myfile']['tmp_name'],"saved_images/".$_FILES['myfile']['name']))
 echo "yes";
 rename("saved_images/".$_FILES['myfile']['name'],"saved_images/request_file.".$_COOKIE['id_cerere'].".jpg");

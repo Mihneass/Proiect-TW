@@ -169,8 +169,8 @@ if(!isset($_COOKIE['is_logged'])){
 									
 								<td><label for="ip"> <span>Admin/Normal </span>
 									<select name="schedule2" id="schedule2">
-										<option value="normal">Normal</option>
-										<option value="admin">Admin</option>	
+										<option value="false">Normal</option>
+										<option value="true">Admin</option>	
 									</select></td>
 								
 							</tr>

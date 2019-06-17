@@ -22,7 +22,7 @@ if($_POST['passr']!=$_POST['passr2'])setcookie("error_state","PASS_DOESNT_MATCH"
 $enquiry="insert into useri values(:id_user,:admin, :username, :pass, :nume, :prenume, :gender, :phone, :addre, :email_address, :date1, :date2)";
 $stid = oci_parse($conn, $enquiry);
 $idd=$_COOKIE['current_ID'];
-$admin='false';
+$admin=$_POST['schedule2'];
 oci_bind_by_name($stid,':id_user',$idd);
 oci_bind_by_name($stid,':admin',$admin);
 oci_bind_by_name($stid,':username',$_POST['uname']);

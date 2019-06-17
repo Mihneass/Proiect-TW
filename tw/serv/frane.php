@@ -16,7 +16,7 @@
 		<div>
 		<?php
 			if($_COOKIE['is_logged']==="LOGGED"){
-				echo "<form action=".'"'."logout_process.php".'"'." method=".'"'."POST".'"'." >";	
+				echo "<form action=".'"'."../logout_process.php".'"'." method=".'"'."POST".'"'." >";	
 				echo "<button type=".'"'."submit".'"'."name=".'"'."logbutton".'"'.">LOGOUT</button>";
 				echo "</form>";
 			}
