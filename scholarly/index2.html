@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -35,38 +36,452 @@
 
     <section id="Ghid">
             <!-- review? -->
-            <h2>Ghid de utilizare</h2>
+            <h2>Detalierea functionarii</h2>
 
            
-            
+            <section id="Tehnologiile-folosite">
+                <h4>Tehnologiile folosite</h4>
+              <p>
+                </p>
+                <section id="Oracle">
+                    <h4>Oracle DB</h4>
+                  <p>
+                    Ca baza de date am optat pentru ORACLE, deoarece avem experienta cu utilizarea acesteia
+                    multumita proiectului de la SGBD. In principal s-a folosit o variabila $enquiry care 
+                    ia valoarea query-ului care urmeaza sa fie executat, care ulterior este trecuta prin 
+                    functiile oci_parse() si oci_execute() pentru a interoga/modifica/actualiza baza de date.
+                    In unele cazuri s-a recurs la utilizarea functiei oci_bind_by_name() pentru a intampina
+                    eventualele atacuri de tipul SQL injection. In cazul functionalitatii de login,
+                    s-a utilizat o procedura a bazei de date care interogheaza tabela USERI in functie de 
+                    USER-ul sau (fiind de tipul IN VARCAHR) si primeste restul informatiilor despre acesta 
+                    in alte variabile de tipul OUT VARCHAR.
+                    </p>
+                    <section id="SQL-dev">
+                        <h4>SQL developer</h4>
+                      <p>
+                        Pentru o manipulare mai usoara a bazei de date in afara contextului aplicatiei, ne-am 
+                        folosit de aplicatie SQL developer pentru a verifica corectitudinea diferitelor 
+                        functionalitati, precum si modificarea anumitor entry-uri pe loc.
+
+                        Pentru populare am utilizat un script de populare simplistic care ca datorie sa 
+                        creeze cele trei tabele necesare si sa il umple doar pe cel de piese.
+                        </p>
+                         </section>
+                     </section>
+                     <section id="HTML">
+                        <h4>HTML</h4>
+                      <p>
+                        Aplicatia imitand un site al unei companii, am folosit HTML pentru partea vizuala.
+                        Am folosit "div" si "table" pentru a ordona diferitele elemente ale
+                        paginilor si "form" cu atributele "action" si "method" pentru a face
+                        legatura cu codul de back-end.
+                        </p>
+                         </section>
+                         <section id="CSS">
+                            <h4>CSS</h4>
+                            
+                          <p>
+                              CSS-ul, care se gaseste in folderul tw/css/ da paginilor un aspect autentic.
+                            </p>
+                             </section>
+                             <section id="PHP">
+                                <h4>PHP</h4>
+
+                              <p>
+                                Ca principal limbaj de programare am convenit sa utilizam PHP. Acesta a fost folosit
+                                atat pentru conexiunea cu baza de date, importul si exportul de date cu fisiere de tipul
+                                JSON si CSV, precum si pentru a face diferitele Formulare sa fie functionale. 
+                                </p>
+                                 </section>
+                                 <section id="Javascript">
+                                    <h4>Javascript</h4>
+                                  <p>
+                                    Limbajul Javascript a fost folosit in mod exclusiv in pagina contacte.php cu scopul de a
+                                    ii afisa utilizatorului thumbnail-urile diferitelor comenzi si, in caz ca acestea sunt mai 
+                                    multe de 15 (initial) sau multiplu de 5 (in celelalte cazuri), sa se actualizeze pagina cu
+                                    noi cereri fara reincarcarea sa. Codul acesta ia informatiile despre cereri dintr-un fisier
+                                    JSON (mai multe informatii in sectiunea urmatoare) si le afiseaza sub forma de thumbnail
+                                    in pagina, pentru ca apoi utilizatorul sa se poata deplasa la cererea propriu-zisa
+                                    </p>
+                                     </section>
+                                     <section id="JSON">
+                                        <h4>JSON</h4>
+                                      <p>
+                                        Fisierele de tip JSON le-am folosit in mai multe feluri.
+                                        
+                                        1) tw/jsons/current_fellow.json  tine minte informatiile utilizatorului logat in 
+                                        momentul respectiv;
+                                        2) tw/jsons/requests.json tine minte toate cererile din baza de date, cat timp
+                                        este un utilizator logat. Acest fisier este actualizat de fiecare data cand aplicatia
+                                        face o schimbare la tabela CERERI;
+                                        3) orice JSON de pe masina clientului. Daca utilizatorul logat este administrator, 
+                                        atunci acesta are posibilitatea de a uploada un fisier de tip JSON formatat in
+                                        felul urmator:
+
+                                        [{"id":"x","nr":"x"},...]
+
+                                        unde id ia valoarea intre 1 si 7 si reprezinta id-ul piesei si nr numarul de piese
+                                        pe care vrea sa le adauge, pentru a insera noi piese in baza de date
+                                        </p>
+                                         </section>
+                                         <section id="CSV">
+                                            <h4>CSV</h4>
+                                          <p>
+                                            Fisierele CSV se pot folosi la fel ca cele JSON pentru importul de fisiere, cat
+                                            timp acestea sunt formatate in felul urmator:
+                                            
+                                            -pentru fiecare rand sunt puse doua numere cu virgula intre ele. Primul se afla
+                                            intre 1 si 7 si reprezinta ID-ul piesei care urmeaza sa fie actualizata, iar 
+                                            celalalt reprezinta numarul de piese care o sa fie adaugat.
+
+
+                                            De asemenea, aplicatia poate salva intr-un fisier requests.csv aflat in folderul
+                                            tw/csv/ toate cererile din baza de date din momentul respectiv.
+                                            </p>
+                                             </section>
+                 </section>
             <section id="menu">
               <!-- review? -->
-              <h3>Meniu</h3>
-              <section id="Home">
+              <h3>Elementele aplicatiei</h3>
+              <section id="Baza-de-date">
                 <!-- review? -->
-                <h3>Home</h3>
+                <h3>Baza de date</h3>
                 <p>
+                  Baza de date este formata din trei tabele.
+                  1) USERI
+                  Acesta memoreaza ID-ul unic al user-ului, username-ul sau, parola hash-uita cu functia MD5(),
+                  numele utilizatorului, Prenumele sau, adresa, precum si adresa sa de email.
+                  2) CERERI
+                  Acesta memoreaza ID-ul unic al cererii, ID-ul user-ului care a facut acea cerere,
+                  numele piesei/serviciului cerut de respectiva cerere, precum si numarul de piese/servicii cerut.
+                  3) PIESE 
+                  Acesta memoreaza ID-ul piesei, numele sau, precum si cate mai sunt disponibile.
+                </p>
+
+                     
                        </section>
-              <section id="Bookmarks">
-              <h3>Servicii</h3>
+                       <section id="Elemente-pan-aplicatie">
+                          <h4>Elemente pan-aplicatie</h4>
+                        <p>
+                          Pentru functionarea aplicatiei dupa cum ne-am imaginat-o, ne-am folosit de anumite elemente
+                          pe care am vrut sa le accesam, oricare ar fi pagina in care ne aflam. Acestea sunt dupa
+                          cum urmeaza.
+                          </p>
+                          <section id="COOKIE-uri">
+                              <h4>COOKIE-uri</h4>
+                            <p>
+                              1) "is_logged" are valoarea 0 daca nimeni nu este logat. Daca incearca sa se logheze si user-ul
+                              nu face parte din baza de date, primeste valoarea "USER_NOT_FOUND", ca apoi sa se intoarca la
+                              valoarea 0. Daca user-ul este corect, dar parola nu, valoarea primita este "PASS_NOT_FOUND".
+                              Daca si user-ul si parola sunt corecte, valoarea primita este "LOGGED". Durata de viata este
+                              de 10 zile.
+                              2) "user". Acesta primeste user-ul utilizatorului logat in momentul de fata, altfel este mort.
+                              3) "userID". Acesta primeste ID-ul utilizatorului logat in momentul de fata, altfel este mort.
+                              4) "userAdmin". Acesta stie statutul utilizatorului curent: "true" daca este admin, "false"
+                              altfel. Altfel este mort.
+                              5) "error_state". Acesta ia valoarea "USER_TAKEN" daca se incearca crearea unui cont si username-ul
+                              exista deja.
+                              6) "current_ID". Acesta tine minte ce id va avea urmatorul utilizator creat.
+                              7) "id_cerere". Acesta tine minte ce id va avea urmatoarea cerere inserata.
+                              </p>
+
+                               </section>
+
+                               <section id="JSONSS">
+                                  <h4>JSON</h4>
+                                <p>
+                                  Ne-am folosit de fisiere .json pentru a tine minte informatii precum cele despre utilizator sau
+                                despre cereri. Mai multe informatii la 2.1.6</p>
+                                  
+                                   </section>
+                                   <section id="pics">
+                                   <h4>Imagini si videouri</h4>
+                                <p>
+                                  Daca atunci cand creaza o cerere noua, utilizatorul doreste sa ataseze o imagine sau un video,
+                                  acesta are optiunea de a atasa o poza in format .jpg sau un video in format .mp4 pana in 80MB.
+                                  Acestea sunt salvata in folderul tw/saved-images/ si sunt utilizate de pagina CerereTrimisa.php
+                                  pentru a le afisa cand se uita cineva la o cerere.
+                                </p>
+                                  
+                                   </section>
+                                   <section id="Logout">
+                                      <h4>Buton de logout</h4>
+                                    <p>
+                                      Daca cookie-ul "is-logged" este setat pe valoarea "LOGGED", atunci in partea de dreapta-sus 
+                                      a fiecarei pagini va aparea butonul de LOGOUT care redirectioneaza catre logout-process.php
+                                  </p>
+                                      
+                                       </section>
+                           </section>
+              <section id="Paginile-de-interfata">
+              <h3>Paginile de interfata</h3>
               <p>
                        </p>
+                       <section id="index.php">
+                          <h4>Index</h4>
+                        <p>
+                          Index.php este pagina default a aplicatiei. Aceasta contine formularele de Login si Register.
+                          Aceasta poate fi vazuta doar in cazul in care utilizatorul nu este logat, caz in care este 
+                          redirectionat catre services.php.
+                          </p>
+                          <section id="Login">
+                              <h4>Login</h4>
+                            <p>
+                              Formularul de login contine doua campuri: Username si Parola, precum si butonul de tip submit.
+                              Daca butonul de tip submit este apasat, aplicatia trece in login-process.php unde verifica
+                              datele de intrare.
+                              </p>
+                               </section>
+                               <section id="Register">
+                                  <h4>Register</h4>
+                                <p>
+                                  Formularul de register contine mai multe campuri:
+                                  -numele de utilizator (care nu poate fi acelasi cu unul deja existent in baza de date);
+                                  -adresa de email (care necesita caracterul "@", precum si cel putin o litera dupa);
+                                  -numele de familie;
+                                  -numele mic;
+                                  -adresa;
+                                  -genul;
+                                  -daca sa fie admin sau nu;
+                                  -numarul de telefon;
+                                  -parola;
+                                  -confirmare parola (care trebuie sa fie acelasi string ca si input-ul parola);
+
+                                  precum si butonul de tip submit. Cand acesta este apasat, aplicatia se duce in
+                                  user_creation_process.php pentru a verifica si folosi datele scrise in formular.
+                                  </p>
+                                   </section>
+                           </section>
+                           <section id="services">
+                              <h4>Services</h4>
+                            <p>
+                              Aceasta pagina contine mai multe informatii despre diferitele servicii oferite, precum si preturile aferente.
+                              Cat timp utilizatorul este unul normal, aceasta pagina nu ofera nicio functionalitate.
+                              </p>
+                              <section id="Revizii">
+                                  <h4>Revizii</h4>
+                                <p>
+                                  Detalii si preturi.
+                                  </p>
+                                   </section>
+                                   <section id="Cadru">
+                                      <h4>Cadru</h4>
+                                    <p>Detalii si preturi.
+                                      </p>
+                                       </section>
+                                       <section id="Furca">
+                                          <h4>Furca si shock</h4>
+                                        <p>Detalii si preturi.
+                                          </p>
+                                           </section>
+                                           <section id="Roti">
+                                              <h4>Roti</h4>
+                                            <p>Detalii si preturi.
+                                              </p>
+                                               </section>
+                                               <section id="Frane">
+                                                  <h4>Frane</h4>
+                                                <p>Detalii si preturi.
+                                                  </p>
+                                                   </section>
+                                                   <section id="Transmisii">
+                                                      <h4>Transmisii</h4>
+                                                    <p>Detalii si preturi.
+                                                      </p>
+                                                       </section>
+                                                       <section id="Diverse">
+                                                          <h4>Diverse</h4>
+                                                        <p>Detalii si preturi.
+                                                          </p>
+                                                           </section>
+                              <section id="admin-specific">
+                                  <h4>Functionalitati specifice administratorului</h4>
+                                <p>
+                                  Daca utilizatorul este administrator, acesta are 4 optiuni unice:
+                                  1) sa salveze toate cererile din baza de date in fisierul requests.csv din
+                                  folderul csv. (duce in save-csv.php)
+                                  2) sa trimita un formular "provider-ului" pentru a primi in numar exact de piese.
+                                  (duce in formularAdmin.php)
+                                  3) sa importe un fisier de tip .csv de pe calculator pentru a adauga noi piese
+                                  in baza de date.(duce in read-csv.php) (mai multe informatii la 2.1.7)
+                                  4) sa importe un fisier de tip .json de pe calculator pentru a adauga noi piese
+                                  in baza de date. (duce in read-json.php)(mai multe informatii la 2.1.6)
+                                  </p>
+                                   </section>
+                               </section>
+                               <section id="comenzi">
+                                  <h4>Comenzi</h4>
+                                <p>
+                                  Aceasta pagina afiseaza:
+                                  a) cererile aferente utilizatorului logat daca acesta nu este admin;
+                                  b) toate cererile daca utilizatorul este admin.
+
+                                  Mai multe informatii la 2.1.5 si 2.1.6.
+                                  </p>
+                                  <section id="CerereTrimisa">
+                                      <h4>Cerere trimisa/care exista in baza de date</h4>
+                                    <p>
+                                      Aceasta pagina arata poate informatiile relevante legate de o anume cerere:
+                                      -data aleasa de client;
+                                      -situatia curenta;
+                                      -piesele cerute;
+                                      -numarul de piese cerute;
+                                      -detalii suplimentare;
+                                      -(optional) poza sau videoclip;
+
+                                      Daca situatia curenta a cererii este "Pending", pagina functioneaza in felul urmator:
+                                      a) pentru non-admini, nu se poate face nimic.
+                                      b) pentru admini, sunt disponibile doua butoane: Accept si Reject.
+                                      Fiecare dintre acestea il duc pe utilizator la un formular in care poate rescrie detaliile
+                                      cererii pentru a comunica cu clientul. In functie de butonul apasat, situatia curenta a cererii
+                                      devine ori "Accepted", ori "Rejected".
+
+                                      Daca situatia curenta a cererii nu este "Pending", pagina functioneaza in felul urmator:
+                                      a) pentru non-admini apare un buton pe care scrie "Understood". Apasand-ul clientul recunoaste
+                                      raspunsul administratorului si cererea este stearsa din baza de date.
+                                      b) pentru admini, nu se poate face nimic.
+                                      </p>
+                                       </section>
+                                   </section>
+                                   <section id="Calendar">
+                                      <h4>Calendar</h4>
+                                    <p>
+                                      Un calendar cu luni si zile. Sunt disponibile pentru booking doar zilele lucratoare, precum si 
+                                      zilele care nu fac parte din diferitele vacante insemnate cu rosu in calendar. Daca utilizatorul
+                                      da click pe una dintre zile, acesta va fi trimis la un formular pe care il poate completa cu detaliile
+                                      legate de cerere, precum tipul de piesa dorita, numarul de piese dorite, detalii, adresa si, optional,
+                                      poza .jpg sau videoclip .mp4.
+                                      </p>
+                                       </section>
+                                       <section id="Stock">
+                                          <h4>Stock - admin exclusive</h4>
+                                        <p>
+                                          Aceasta pagina include fiecare dintre cele 7 piese facute disponibile de companie, numarul de
+                                          piese ramase din acea piesa in baza de date, precum si doua butoane care incrementeaza sau
+                                          decrementeaza numarul de piese disponibile, folosindu-se de add_piece.php si delete_piese.php.
+                                          </p>
+                                           </section>
+                                           <section id="Formulare">
+                                              <h4>Formulare</h4>
+                                            <p>
+                                              </p>
+                                              <section id="Formular-client">
+                                                  <h4>Formular pentru client</h4>
+                                                <p>
+                                                  Formularul clientului contine:
+                                                  -tipul de piesa/serviciu dorit;
+                                                  -numarul de piese/servicii;
+                                                  -detaliile cererii;
+                                                  -(optional) o poza (in format .jpg) sau un video (in format .mp4);
+                                                  -adresa;
+                                                  </p>
+                                                   </section>
+                                                   <section id="Formular-admin">
+                                                      <h4>Formular pentru administrator</h4>
+                                                    <p>
+                                                        Formularul administratorului contine:
+                                                        -tipul de piesa/serviciu dorit;
+                                                        -numarul de piese/servicii;
+                                                        -detaliile cererii;
+                                                        -adresa;
+                                                      </p>
+                                                       </section>
+                                               </section>
             </section>
-            <section id="Add-Content">
-              <h3>Comenzi</h3>
+            <section id="back-end">
+              <h3>PHP-urile de back-end</h3>
               <p>
                     </p>
+                    <section id="back-end1">
+                        <h3>acceptRequest.php</h3>
+                        <p>Acest .php este "apelat" dupa ce administratorul finalizeaza intregul proces
+                          de acceptare a unei cereri. Acest cod se conecteaza la baza de date si scade
+                          numarul de piese conform numarului cerut de client si actualizeaza informatiile
+                          legate de cerere (situatia curenta si detaliile cererii).
+                          Dupa aceasta, fisierul requests.json care tine minte toate cererile este golit
+                          si apoi reumplut cu toate cererile din baza de date.
+                              </p>
+                      </section>
+                      <section id="back-end2">
+                          <h3>process_decline.php</h3>
+                          <p>Acest .php este "apelat" dupa ce administratorul finalizeaza intregul proces
+                            de respingere a unei cereri. Acest cod se conecteaza la baza de date si 
+                            actualizeaza informatiile legate de cerere (situatia curenta si detaliile cererii).
+                            Dupa aceasta, fisierul requests.json care tine minte toate cererile este golit
+                            si apoi reumplut cu toate cererile din baza de date.
+                                </p>
+                        </section>
+                        <section id="back-end3">
+                            <h3>process_delete_client.php</h3>
+                            <p>Acest process sterge cererea in cauza din baza de date si reactualizeaza fisierul
+                              requests.json.
+                            </p>
+                          </section>
+                          <section id="back-end4">
+                              <h3>get-stuff.php</h3>
+                              <p>Acest process este apelat cand este trimis formularul administratorului. Acesta
+                                actualizeaza baza de date si adauga cate elemente trebuie in functie de cate
+                                a cerut administratorul
+                              </p>
+                            </section>
+                            <section id="back-end5">
+                                <h3>login-process.php</h3>
+                                <p>Acest process este apelat cand este trimis formularul de login. Acesta apeleaza
+                                  o procedura a bazei de date prin care trimite user-ul si primeste celelalte informatii
+                                  prin intermediul altor variabile (de tipul OUT VARCHAR). Daca aceste variabile nu au
+                                  nicio valoare, este considerat ca username-ul nu exista in baza de date. Daca au, 
+                                  dar parola inserata nu corespunde (dupa ce a fost trecuta prin functia md5()), 
+                                  este considerat ca parola nu corespunde. Daca parola corespunde, atunci cookie-urile
+                                  "is-logged", "user", "userID" si "userAdmin" primesc valorile aferente (mai multe informatii
+                                  la 2.2.2.1), current-fellow.json primeste informatiile acestui user si requests.json
+                                  este umplut cu toate cererile.
+                                </p>
+                              </section>
+                              <section id="back-end6">
+                                  <h3>logout_process.php</h3>
+                                  <p>Acest process este apelat cand este trimis formularul de logout. Cookie-urile sunt 
+                                    resetate, current-fellow.json si requests.json sunt golite.
+                                  </p>
+                                </section>
+                                <section id="back-end7">
+                                    <h3>make-request.php</h3>
+                                    <p>Acest process este apelat cand este trimis formularul de client. Acesta actualizeaza 
+                                      baza de date si introduce o cerere noua in functie de informatiile input-ate in formular.
+                                      Dupa aceasta se uploadeaza imaginea/videoclipul (daca exista). In final, se actualizeaza
+                                      fisierul requests.json.
+                                    </p>
+                                  </section>
+                                  <section id="back-end8">
+                                      <h3>read-csv.php</h3>
+                                      <p>Acest process este apelat cand este trimis formularul de import CSV. Acesta ia fisierul 
+                                        in format .csv de pe masina, il citeste si actualizeaza tabela PIESE.
+                                      </p>
+                                    </section>
+                                    <section id="back-end9">
+                                        <h3>read-csv.php</h3>
+                                        <p>Acest process este apelat cand este trimis formularul de import JSON. Acesta ia fisierul 
+                                          in format .json de pe masina, il citeste si actualizeaza tabela PIESE.
+                                        </p>
+                                      </section>
+                                      <section id="back-end10">
+                                          <h3>read-csv.php</h3>
+                                          <p>Acest process este apelat cand este trimis formularul de export CSV. Codul ia cererile
+                                            din baza de date si le exporta in fisierul requests.csv din folder-ul tw/csv/.
+                                          </p>
+                                        </section>
+                                        <section id="back-end11">
+                                            <h3>user_creation_process.php</h3>
+                                            <p>Acest process este apelat cand este trimis formularul de register. Acesta ia informatiile.
+                                              In prima instanta compara user-ul inserat cu user-ele deja existente in baza de date. Daca
+                                              mai gaseste unul, da eroare. In a doua instanta, verifica daca input-ul din cele doua
+                                              campuri de parola este la fel. Daca nu e, da eroare. Altfel parola este hash-uita cu functia
+                                              md5() si este inserat un nou user in tabela USERI.
+                                            </p>
+                                          </section>
             </section>
-            <section id="Follows">
-              <h3>Calendar</h3>
-              <p>
-                 </section>
-            <section id="disconnect">
-              <h3>Logout</h3>
-              <p>
-               
-              </p>
-            </section>
+            
+                 
+            
         </section>
       </section>
 
