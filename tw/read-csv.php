@@ -6,20 +6,34 @@ if (!$conn) {
    echo $m['message'], "\n";
    exit;
 }
-$enquiry="SELECT * FROM CERERI";
-$stid = oci_parse($conn, $enquiry);
-
-oci_execute($stid);
+if(empty($_FILES))
+{
+  echo "File not found";
+  exit;
+}
 $i=0;
-$myfile=fopen("csv/requests.csv","r");
+$j=$_COOKIE['id_cerere'];
+var_dump($_FILES);
+$myfile=fopen($_FILES['impCsv']['tmp_name'],"r");
 while($data = fgetcsv($myfile, 1000)){
   //  var_dump($data);
     $i=0;
-    while($i<8){
+
+    $enquiry="UPDATE PIESE SET NR_PIESE=NR_PIESE+:obj_nr WHERE ID=:idd";
+$stid = oci_parse($conn, $enquiry);
+$j++;
+oci_bind_by_name($stid,':idd',$data[0]);
+oci_bind_by_name($stid,':obj_nr',$data[1]);
+
+oci_execute($stid);
+
+    
+    while($i<=1){
     echo $data[$i].", ";
     $i++;}
   //  if($i===7){$i=0;
     echo "<br>";
 //}
 }
+setcookie('id_cerere',$j,time()+time()+(86400*100));
 ?>

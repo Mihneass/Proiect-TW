@@ -89,7 +89,7 @@
 
    var current="<?php echo $_COOKIE['userID'] ?>";
    console.log(current);
-   fetch('jsons/requests.json?vr=2.1')
+   fetch('jsons/requests.json?vr=3.0')
    .then(response => {
        if (!response.ok) {
            throw new Error("HTTP error " + response.status);

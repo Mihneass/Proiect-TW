@@ -4,7 +4,7 @@
 if(empty($_FILES['myfile']['tmp_name']))
 {
   echo "File not found";
-  exit;
+  //exit;
 }
 if(!isset($_COOKIE['id_cerere']))setcookie('id_cerere',61,time()+time()+(86400*100));
 $conn = oci_connect("student", "student", "localhost:1521/xe");
@@ -60,5 +60,5 @@ $thisUser=array();
                                         file_put_contents('./jsons/requests.json',$formatedInfo);
                                       }
 
-header('Location: contact.php');
+//header('Location: contact.php');
 ?>

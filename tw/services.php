@@ -182,14 +182,8 @@
 							<form action="save-csv.php" method="POST">
 							<button type="submit">Do csv</button>
 							</form>
-
-						
-						</div>
-						</li>
-						<li>
-						<div>
-						<form action="read-csv.php" method="POST">
-							<button type="submit">Get csv</button>
+							<form action="formularAdmin.php" method="POST">
+							<button type="submit">Form Admin</button>
 							</form>
 
 						
@@ -197,8 +191,21 @@
 						</li>
 						<li>
 						<div>
-						<form action="formularAdmin.php" method="POST">
-							<button type="submit">Make request</button>
+						<form action="read-csv.php" method="POST" enctype="multipart/form-data">
+							<label for="impCsv">Import csv</label>
+							<input type="file" id="impCsv" name="impCsv" accept=".csv">
+							<button type="submit">Import</button>
+							</form>
+
+						
+						</div>
+						</li>
+						<li>
+						<div>
+						<form action="read-json.php" method="POST" enctype="multipart/form-data">
+							<label for="impJson">Import json</label>
+							<input type="file" id="impJson" name="impJson" accept=".json">
+							<button type="submit">Import</button>
 							</form>
 
 						

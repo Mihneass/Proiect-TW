@@ -20,11 +20,10 @@ $rc=$row['MRFC'];
 oci_execute($rc);
 $rc_row = oci_fetch_array($rc, OCI_ASSOC+OCI_RETURN_NULLS);
 */
-echo $rpassword;
 if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/");
             echo $enquiry;
             oci_close ($conn);
-      //      header('Location: index.php');
+            header('Location: index.php');
             }
         else if($rpassword!=md5($_POST['pass'])){
             setcookie("is_logged","PASS_NOT_FOUND",time()+(86400*10),"/");
@@ -49,13 +48,8 @@ if($rpassword==null){setcookie("is_logged","USER_NOT_FOUND",time()+(86400*10),"/
                   file_put_contents('./jsons/current_fellow.json',$formatedInfo);
         //          fclose('./jsons/current_fellow.json');
         
-                $conn = oci_connect("student", "student", "localhost:1521/xe");
-                if (!$conn) {
-                  $m = oci_error();
-                   echo $m['message'], "\n";
-                   exit;
-                      }
-                $enquiry="SELECT * FROM cereri";
+              
+                $enquiry="SELECT * FROM CERERI";
                 $stid = oci_parse($conn, $enquiry);
                 oci_execute($stid);	
                       while($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)){

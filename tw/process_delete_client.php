@@ -1,4 +1,8 @@
 <?php
+if(file_exists("saved_images/request_file.".$_POST['request-id'].".jpg"))
+unlink("saved_images/request_file.".$_POST['request-id'].".jpg");
+if(file_exists("saved_images/request_file.".$_POST['request-id'].".mp4"))
+unlink("saved_images/request_file.".$_POST['request-id'].".mp4");
 $conn = oci_connect("student", "student", "localhost:1521/xe");
 if (!$conn) {
   $m = oci_error();
@@ -44,6 +48,6 @@ if (!$conn) {
                             file_put_contents('./jsons/requests.json',$formatedInfo);
                           }
                   //        echo "<br><br>".$i;
-//header('Location: contact.php');
+header('Location: contact.php');
 
 ?>
