@@ -8,10 +8,10 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/stilizare-butoane.css" />
-    <link rel="stylesheet" href="css/pentru-cerere.css" />
+	<link rel="stylesheet" href="css/cererea.css">
 	
 <style>
-
+      
 </style>
 
 </head>
@@ -138,7 +138,7 @@ echo "
 			
 			if(file_exists("saved_images/request_file.".$_GET['page'].".jpg"))
 			echo "
-			<img src=saved_images/request_file.".$_GET['page'].".jpg>";
+			<img class=".'"'."sent-image".'"'." src=saved_images/request_file.".$_GET['page'].".jpg>";
 			else if(file_exists("saved_images/request_file.".$_GET['page'].".mp4"))
 			echo "
 			<video width=300 height=300 controls>
